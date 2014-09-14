@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140914061615) do
+ActiveRecord::Schema.define(version: 20140914182736) do
 
   create_table "hyg_stars", force: true do |t|
     t.integer "star_id",         limit: 8
@@ -37,6 +37,17 @@ ActiveRecord::Schema.define(version: 20140914061615) do
     t.integer "vx",              limit: 8
     t.integer "vy",              limit: 8
     t.integer "vz",              limit: 8
+  end
+
+  create_table "population_densities", force: true do |t|
+    t.integer "rank"
+    t.string  "name"
+    t.integer "population_density"
+    t.integer "population"
+    t.integer "area"
+    t.integer "max"
+    t.integer "min"
+    t.text    "neighbors"
   end
 
 end
