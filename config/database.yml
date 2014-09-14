@@ -1,0 +1,23 @@
+development:
+  adapter: mysql2
+  database: camcos_development
+  username: root
+  password:
+  host: localhost
+  encoding: utf8
+
+production:
+  adapter: mysql2
+  database: camcos_production
+  username: root
+  password:
+  host: ec2-107-22-163-140.compute-1.amazonaws.com
+  encoding: utf8
+
+test:
+  adapter: mysql2
+  database: camcos_test
+  username: root
+  password:
+  host: localhost
+  encoding: utf8
