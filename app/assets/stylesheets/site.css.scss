@@ -1,3 +1,400 @@
-// Place all the styles related to the Site controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* ==========================================================================
+Parallax Scroll
+========================================================================== */
+/* line 9, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
+body, html {
+  height: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  font-family: 'Actor';
+}
+
+/* line 17, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
+.no-js {
+  padding-top: 106px;
+}
+
+/* line 23, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
+.loading {
+
+}
+
+/* line 26, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
+section {
+  min-width: 960px;
+  opacity: 0;
+}
+
+/* line 31, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
+.loaded section,
+.no-js section {
+  opacity: 1;
+  -webkit-transition: opacity 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
+}
+
+/* line 37, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
+main {
+  overflow-x: hidden;
+}
+
+
+/* line 41, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
+.bcg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+
+/* line 73, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
+.hsContainer {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 82, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
+.hsContent {
+  max-width: 450px;
+  margin: -150px auto 0 auto;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0px 8%;
+  text-align: center;
+
+
+}
+
+
+/// font-family: 'Numans', sans-serif;
+// font-family: 'Spinnaker', sans-serif;
+// font-family: 'PT Sans Caption', sans-serif;
+// font-family: 'Comfortaa', cursive;
+// font-family: 'Droid Sans Mono', ;
+// font-family: 'Cabin', sans-serif;
+// font-family: 'Lora', serif;
+// font-family: 'Quicksand', sans-serif; ----
+// font-family: 'Muli', sans-serif;
+// font-family: 'Merriweather', serif; no
+// font-family: 'Titillium Web', sans-serif; --
+// font-family: 'Francois One', sans-serif; no
+// font-family: 'Inconsolata', ; no
+// font-family: 'Tenor Sans', sans-serif;
+// font-family: 'Averia Serif Libre', cursive; --
+// font-family: 'Cantarell', sans-serif; no
+// font-family: 'Nunito', sans-serif; no
+// font-family: 'Jura', sans-serif; no
+// font-family: 'Quattrocento Sans', sans-serif;
+// font-family: 'Peddana', serif;
+// font-family: 'Telex', sans-serif; --
+// font-family: 'Varela Round', sans-serif;
+// font-family: 'Averia Gruesa Libre', cursive; --
+
+
+h1, h2, h3 {
+  margin-top: 0;
+  font-family: 'Averia Gruesa Libre';
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+.splash-head, .subhead {
+  line-height: 48px;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.splash-head {
+  font-size: 54px;
+}
+
+.subhead {
+  font-size: 25px;
+}
+
+.pink {
+  color: #731A33;
+}
+
+.white {
+  color: rgb(255, 255, 255);
+}
+
+
+.hsContent {
+  padding: 40px 279.2px;
+}
+
+
+
+.hsContent p {
+  margin: 35px auto;
+  color: #7f7f7f;
+  font-size: 20px;
+}
+
+.bgBlack {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 3px 10px;
+}
+
+.divider {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+///// rgb(34,49,63) - blue
+/// rgb(63,34,49) - pink (accent)
+/// rgb(49,63,34) green (Heading)
+
+///////////////////////////////////////////////////////////////////////////////////
+//////////////////////// Side Navbar /////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+ul.side-nav.container {
+  position: fixed;
+  top: 678px;
+  right: 5%;
+  width: 140px;
+  height: 400px;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-align: center;
+  z-index: 999;
+  outline: 1px solid transparent;
+}
+
+
+li.side-nav {
+
+  position: relative;
+  height: 50px;
+  padding: 15px;
+  margin: 0px;
+  z-index: 15;
+  font-size: 30px;
+  background-color: #731A33;
+  text-shadow: 0px 2px 3px #2C2A2A;
+  color: #FFFFFF;
+  border-radius: 1px;
+
+  &:hover {
+  //  background-color: rgb(166,166,166);
+    background-color: rgba(44, 42, 42, .85);
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////// Slide 1 ///////////////////////////////////////////////////
+////////////////////// Store Front //////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+#slide-1 .bcg {
+  background: url("ottos-without-text.jpg");
+  background-size: auto 100%;
+}
+
+#slide-1 .hsContent {
+  padding: 0px 0px;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////// Slide 2 ///////////////////////////////////////////////////
+////////////////////// Video ////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+#slide-2 .bcg {
+  background: none;
+  background-color: #010101;
+  text-align: center;
+}
+
+.video-js .vjs-tech {
+  position: relative !important;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////// Slide 3 ///////////////////////////////////////////////////
+////////////////////// Tools Picture ////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+#slide-3 .bcg {
+  background-image: url("wall-of-tools.jpg");
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////// Slide 4 ///////////////////////////////////////////////////
+////////////////////// Contact //////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+#slide-4 {
+  background-color: #22313F;
+  height: 310px;
+  text-align: center;
+}
+
+#phone {
+  margin-bottom: 0px;
+  color: #fff;
+  text-shadow: 0px 2px 1px rgba(0,0,0,0.4), 0px 6px 11px rgba(0,0,0,0.1), 0px 16px 21px rgba(0,0,0,0.1);
+  font-size: 90px;
+  letter-spacing: 2px;
+  font-family: 'Averia Gruesa Libre';
+}
+
+.ottos-info li {
+  color: #fff;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+  display: block;
+  margin: 40px;
+  letter-spacing: 2px;
+}
+
+.hours {
+  font-size: 30px;
+}
+
+.email, .address {
+  font-size: 30px;
+  font-family: 'Averia Gruesa Libre';
+}
+
+#google-map {
+  height: 250px;
+}
+
+div.info {
+  height: 35px;
+  width: 210px;
+  font-weight: bold;
+  font-size: 15.5px;
+  color: #000;
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////// Slide 5 ///////////////////////////////////////////////////
+///////////////////// Services //////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.curtainContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #fff;
+}
+
+.curtainContainer .curtain {
+  width: 300%;
+  height: 1px;
+  background-color: #000000;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  opacity: .5;
+
+}
+
+.curtainContainer .copy {
+  position: absolute;
+  bottom: 30%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+
+}
+
+#slide-5 .bcg {background-image:url('golden-gate.jpg')}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////// Slide 5 ///////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////// Slide 5 ///////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////// Slide 6 ///////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+#slide-6 .bcg {
+  background: none;
+  background-color: #fff;
+  height: 310px;
+  text-align: center;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////// Slide 7 ///////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////// Slide 8 ///////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+#slide-8 {
+
+  background-color: #fff;
+  height: 310px;
+  text-align: center;
+
+}
+
+
+
+#slide-9 .bcg {
+  background-image: url("golden-gate.jpg");
+}
+#slide-9 .bcg2 {
+  background-image: url("golden-gate-dark.jpg");
+  position: fixed;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+#slide-9 .bcg3 {
+  background: none;
+  background-color: #010101;
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+}
+
+
+////////////////
+///////////////
+/// font-family: 'Numans', sans-serif;
+// font-family: 'Spinnaker', sans-serif;
+// font-family: 'PT Sans Caption', sans-serif;
+// font-family: 'Comfortaa', cursive;
+// font-family: 'Droid Sans Mono', ;
+// font-family: 'Dosis', sans-serif;
+// font-family: 'Arvo', serif;
+// font-family: 'Cabin', sans-serif;
+// font-family: 'Lora', serif;
+// font-family: 'Quicksand', sans-serif;
+// font-family: 'Muli', sans-serif;
+// font-family: 'Merriweather', serif;
+// font-family: 'Titillium Web', sans-serif;
+// font-family: 'Francois One', sans-serif;
+// font-family: 'Inconsolata', ;
