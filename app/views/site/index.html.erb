@@ -31,7 +31,8 @@
       <div class="bcg" data-0="background-color:rgb(1,27,59);" data-top="background-color:(255,255,255); opacity=1;"  data-anchor-target="#slide-2">
         <div class="hsContainer">
           <div class="hsContent">
-            <h2 class="pink">About</h2>
+            <h2 class="pink">About<hr class="divider"/></h2>
+
 
             <video id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
               preload="auto" width="100%" height= "350px" poster="assets/nanu.png"
@@ -47,6 +48,8 @@
       </div>
     </section>
 
+
+
     <section id="slide-3" class="homeSlide homeSlideShort slide">
       <div class="bcg" data-center="background-position: 0px 50%;" data-bottom-top="background-position: 0px 50%;" data-top-bottom="background-position: 0px 50%;" data-anchor-target="#slide-3">
         <div class="hsContainer">
@@ -58,35 +61,51 @@
       </div>
     </section>
 
+    <section id="appliances" class="homeSlide homeSlideShort slide">
+      <div class="hsContainer">
+        <div class="hsContent white">
+          <div id="circle">
+            <div class="bcg" data-center="background-position: 0px 50%;" data-bottom-top="background-position: 0px 50%;" data-top-bottom="background-position: 0px 50%;" data-anchor-target="#appliances">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section id="slide-4" class="homeSlide2 slide">
+
+
+    <section id="slide-4" class="homeSlide slide">
       <div class="bcg" data-anchor-target="#slide-4">
         <div class="hsContainer">
-          <div class="hsContent">
+          <div class="hsContent white">
 
             <h2 class="white">Contact Us <hr class="divider"/></h2>
 
-
-            <ul class="ottos-info">
-
-              <li class="hours"><strong>Hours</strong>: 8am - 5pm, Monday - Thursday
+            <div class="contact-container">
+              <div class="hours">
+                8am - 5pm, Monday - Thursday
                 <br/> 8am - 3pm, Friday
-                <br/>
-                (Closed 12-1pm)
-              </li>
+                <br/><span class="hours closed">(Closed 12-1pm)</span>
+              </div>
+              <%= image_tag  "yelp-logo.png", class: "social-media" %>
+              <%= image_tag  "facebook-logo.png", class: "social-media" %>
+            </div>
 
-              <li> <div id="phone">650 588 0309</div> </li>
+            <div id="phone">650.588.0309</div>
 
-              <li class="ottos-info email">
-                <strong>services@ottosappliance.com</strong>
-              </li>
+            <div class="ottos-info">
+
+              <div class="ottos-info address">
+                1663 El Camino Real Millbrae, CA 94030
+              </div>
 
 
+              <div class="ottos-info email">
+                services@ottosappliance.com
+              </div>
 
-              <li class="ottos-info address">
-                <strong> 1663 El Camino Real, Millbrae, CA 94030 </strong>
-              </li>
-            </ul>
+
+            </div>
 
             <div id="google-map"> </div>
           </div>

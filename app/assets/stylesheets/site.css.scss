@@ -74,39 +74,39 @@ main {
 }
 
 
-/// font-family: 'Numans', sans-serif;
-// font-family: 'Spinnaker', sans-serif;
-// font-family: 'PT Sans Caption', sans-serif;
-// font-family: 'Comfortaa', cursive;
-// font-family: 'Droid Sans Mono', ;
-// font-family: 'Cabin', sans-serif;
-// font-family: 'Lora', serif;
-// font-family: 'Quicksand', sans-serif; ----
-// font-family: 'Muli', sans-serif;
-// font-family: 'Merriweather', serif; no
-// font-family: 'Titillium Web', sans-serif; --
-// font-family: 'Francois One', sans-serif; no
-// font-family: 'Inconsolata', ; no
-// font-family: 'Tenor Sans', sans-serif;
-// font-family: 'Averia Serif Libre', cursive; --
-// font-family: 'Cantarell', sans-serif; no
-// font-family: 'Nunito', sans-serif; no
-// font-family: 'Jura', sans-serif; no
-// font-family: 'Quattrocento Sans', sans-serif;
-// font-family: 'Peddana', serif;
-// font-family: 'Telex', sans-serif; --
-// font-family: 'Varela Round', sans-serif;
+
 // font-family: 'Averia Gruesa Libre', cursive; --
+// font-family: 'Andada', serif; pretty good
+// font-family: 'Cutive', serif; no
+// font-family: 'Poly', serif;
+// font-family: 'Suranna', serif;
+// font-family: 'Crimson Text', serif;
+// font-family: 'Ramaraja', serif;
+// font-family: 'Karma', serif; okay
+// font-family: 'Suravaram', serif; no
+// font-family: 'Sree Krushnadevaraya', serif;
+// font-family: 'Averia Libre', cursive; -----
+// font-family: 'Enriqueta', serif; no
+// font-family: 'Playfair Display SC', serif;
+// font-family: 'Goudy Bookletter 1911', serif; no
+// font-family: 'Goudy Bookletter 1911', serif; no
+// font-family: 'Rosarivo', serif; --------
+// font-family: 'Playfair Display', serif; ----
+// font-family: 'Overlock', cursive; ---
+// font-family: 'Halant', serif;
+// font-family: 'Marcellus SC', serif; --
+// font-family: 'Overlock SC', cursive; ----
 
 
 h1, h2, h3 {
   margin-top: 0;
-  font-family: 'Averia Gruesa Libre';
+  font-family: 'Playfair Display';
 }
 
 h2 {
   font-size: 40px;
   line-height: 1.1;
+  letter-spacing: 1px;
 }
 
 .splash-head, .subhead {
@@ -117,7 +117,7 @@ h2 {
 }
 
 .splash-head {
-  font-size: 54px;
+  font-size: 55px;
 }
 
 .subhead {
@@ -183,7 +183,7 @@ ul.side-nav.container {
 li.side-nav {
 
   position: relative;
-  height: 50px;
+  height: 80px;
   padding: 15px;
   margin: 0px;
   z-index: 15;
@@ -242,36 +242,95 @@ li.side-nav {
   background-color: #22313F;
   height: 310px;
   text-align: center;
+  z-index: 100;
 }
 
 #phone {
-  margin-bottom: 0px;
+  margin: 15px 0px 10px 0px;
   color: #fff;
   text-shadow: 0px 2px 1px rgba(0,0,0,0.4), 0px 6px 11px rgba(0,0,0,0.1), 0px 16px 21px rgba(0,0,0,0.1);
-  font-size: 90px;
+  font-size: 55px;
   letter-spacing: 2px;
   font-family: 'Averia Gruesa Libre';
 }
 
-.ottos-info li {
-  color: #fff;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+.ottos-info div {
   display: block;
-  margin: 40px;
-  letter-spacing: 2px;
+}
+
+.ottos-info {
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+  padding: 0px;
+}
+
+div.contact-container {
+  height: 88px;
+}
+
+span.hours {
+  font-size: 15px;
+  width: 100%;
 }
 
 .hours {
-  font-size: 30px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+  font-size: 20px;
+  float: left;
+  position: relative;
+  text-align: center;
+  letter-spacing: 3px;
+  line-height: 30px;
+  left: 0px;
+}
+
+img.social-media {
+  position: relative;
+  left: 0px;
+  top: 15px;
+  padding: 0px 10px;
+  height: 50px;
+  z-index: 100;
+  border-radius: 25%;
+}
+
+img.social-media:hover {
+  opacity: 1;
+  border-shadow: 1px 1px 1px #fff;
+}
+
+.email {
+  letter-spacing: 2px;
+  float: right;
+  right: 49px;
+  line-height: 80px;
+  position: relative;
+  &:after {
+    content: '';
+    border-left: 1px solid #C2C2C2;
+    position: absolute;
+    height: 40px;
+    left: -10px;
+    top: 20px;
+  }
+
+}
+
+.address {
+  float: left;
+  left: 18px;
+  line-height: 80px;
+  position: relative;
 }
 
 .email, .address {
-  font-size: 30px;
-  font-family: 'Averia Gruesa Libre';
+  font-size: 20px;
+  font-family: 'Actor';
 }
 
 #google-map {
-  height: 250px;
+  height: 230px;
+  border-radius: 10px;
+  margin-top: 100px;
 }
 
 div.info {
@@ -282,7 +341,22 @@ div.info {
   color: #000;
 }
 
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////// Slide 5 ///////////////////////////////////////////////////
+///////////////////// Appliances //////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
+#circle {
+  width: 100px;
+  border-radius: 50%;
+  height: 100px;
+  display: inline-block;
+}
+
+#circle .bcg {
+  background-image: url("/appliance-icons/cooktop.png");
+  border-radius: 50%;
+}
 
 ///////////////////////////////////////////////////////////////////////////////////
 ////////////////////// Slide 5 ///////////////////////////////////////////////////
