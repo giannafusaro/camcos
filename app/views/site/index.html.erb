@@ -5,21 +5,26 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
   <main>
-
-    <ul data-smooth-scrolling="off" class="side-nav container serif-font pink">
-      <li class="side-nav 1">Otto's</li>
-      <li class="side-nav 2">About</li>
-      <li class="side-nav 3">Services</li>
-      <li class="side-nav 4">Reviews</li>
-      <li class="side-nav 4">Contact</li>
-    </ul>
+    <div >
+      <ul id="side-nav" class="side-nav container serif-font pink disappear">
+        <li class="side-nav 1"><%= image_tag "old-fashioned-telephone.png", class: "icon icon-phone" %></li>
+        <li class="side-nav 2">About</li>
+        <li class="side-nav 3">Services</li>
+        <li class="side-nav 4">Reviews</li>
+        <li class="side-nav 4">Contact</li>
+      </ul>
+    </div>
 
     <section id="slide-1" class="homeSlide">
-      <div class="bcg" data-center="background-position: 30% 680px;" data-top-bottom="background-position: 30% 780px;" data-anchor-target="#slide-1">
+      <div class="bcg" data-center="background-position: 30% 450px;" data-top-bottom="background-position: 30% 500px;" data-anchor-target="#slide-1">
         <div class="hsContainer">
-          <div class="hsContent" data-anchor-target="#slide-1 h1">
+          <div class="hsContent is-center" data-anchor-target="#slide-1 h1">
+
+
             <h1 class="splash-head white">Otto's Appliance Service, Inc.</h1>
             <h3 class="subhead white">Serving prompt, reliable appliance repairs since 1957.</h3>
+
+            <%= image_tag "arrow-down2.png", class: "icon icon-arrow" %>
           </div>
         </div>
       </div>
@@ -27,13 +32,11 @@
 
 
 
-    <section id="slide-2" class="homeSlide slide">
-      <div class="bcg" data-0="background-color:rgb(1,27,59);" data-top="background-color:(255,255,255); opacity=1;"  data-anchor-target="#slide-2">
+    <section id="slide-2" class="homeSlide homeSlideTall slide">
+      <div class="bcg" data-0="background-color:rgb(1,27,59,);" data-top="background-color:(255,255,255); opacity=1;"  data-anchor-target="#slide-2">
         <div class="hsContainer">
-          <div class="hsContent">
+          <div class="hsContent is-center">
             <h2 class="pink">About<hr class="divider"/></h2>
-
-
             <video id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
               preload="auto" width="100%" height= "350px" poster="assets/nanu.png"
               data-setup="{}">
@@ -50,7 +53,7 @@
 
 
 
-    <section id="slide-3" class="homeSlide homeSlideShort slide">
+    <section id="slide-3" class="homeSlide homeSlideShort2 slide">
       <div class="bcg" data-center="background-position: 0px 50%;" data-bottom-top="background-position: 0px 50%;" data-top-bottom="background-position: 0px 50%;" data-anchor-target="#slide-3">
         <div class="hsContainer">
           <div class="hsContent">
@@ -61,23 +64,43 @@
       </div>
     </section>
 
-    <section id="appliances" class="homeSlide homeSlideShort slide">
+    <section id="services" class="homeSlide homeSlideTall slide">
       <div class="hsContainer">
         <div class="hsContent white">
-          <div id="circle">
-            <div class="bcg" data-center="background-position: 0px 50%;" data-bottom-top="background-position: 0px 50%;" data-top-bottom="background-position: 0px 50%;" data-anchor-target="#appliances">
+
+          <h2 class="pink">Services<hr class="divider"/></h2>
+
+          <section id="appliances" class="service service-appliances">
+            <a class="icon appliances-icon fa fa-wrench fa-3x white is-center">
+              <%= image_tag "thermador-oven-classic4.jpg", class: "services-image" %>
+            </a>
+            <div class="content">
+              <h4 class="blue">Appliances We Fix</h4>
             </div>
-          </div>
+          </section>
+
+            <section class="service service-brands">
+              <a class="icon brands-icon">
+                <h6 class="blue">Brands We Repair</h6>
+              </a>
+            </section>
+
+
+            <section class="service service-locations">
+              <a class="icon locations-icon">
+                <h6 class="blue">Locations We Service</h6>
+              </a>
+            </section>
         </div>
       </div>
     </section>
 
 
 
-    <section id="slide-4" class="homeSlide slide">
+    <section id="slide-4" class="homeSlide homeSlideTall slide">
       <div class="bcg" data-anchor-target="#slide-4">
         <div class="hsContainer">
-          <div class="hsContent white">
+          <div class="hsContent white is-center">
 
             <h2 class="white">Contact Us <hr class="divider"/></h2>
 

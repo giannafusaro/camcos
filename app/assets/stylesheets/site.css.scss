@@ -5,7 +5,7 @@ Parallax Scroll
 body, html {
   height: 100%;
   min-height: 100%;
-  background-color: #fff;
+  // background-color: #fff;
   font-family: 'Actor';
 }
 
@@ -66,13 +66,12 @@ main {
   max-width: 450px;
   margin: -150px auto 0 auto;
   display: table-cell;
-  vertical-align: middle;
   padding: 0px 8%;
-  text-align: center;
-
-
 }
 
+.is-center {
+  text-align: center;
+}
 
 
 // font-family: 'Averia Gruesa Libre', cursive; --
@@ -98,9 +97,11 @@ main {
 // font-family: 'Overlock SC', cursive; ----
 
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   font-family: 'Playfair Display';
+  text-shadow: 0px 1px 2px #000;
+  text-align: center;
 }
 
 h2 {
@@ -128,6 +129,10 @@ h2 {
   color: #731A33;
 }
 
+.blue {
+  color: #22313F;
+}
+
 .white {
   color: rgb(255, 255, 255);
 }
@@ -146,15 +151,16 @@ h2 {
 }
 
 .bgBlack {
-  background-color: rgba(0, 0, 0, 0.75);
+  // background-color: rgba(0, 0, 0, 0.75);
   padding: 3px 10px;
 }
 
 .divider {
   border: 0;
   height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid rgba(72, 71, 71, 0.62);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  width: 50%;
 }
 
 
@@ -167,9 +173,9 @@ h2 {
 //////////////////////////////////////////////////////////////////////////////////
 ul.side-nav.container {
   position: fixed;
-  top: 678px;
+  top: 450px;
   right: 5%;
-  width: 140px;
+  width: 10%;
   height: 400px;
   margin: 0px;
   padding: 0px;
@@ -183,12 +189,12 @@ ul.side-nav.container {
 li.side-nav {
 
   position: relative;
-  height: 80px;
+  height: 70px;
   padding: 15px;
   margin: 0px;
   z-index: 15;
-  font-size: 30px;
-  background-color: #731A33;
+  font-size: 22px;
+  background-color: rgba(115, 26, 51, 1.0);
   text-shadow: 0px 2px 3px #2C2A2A;
   color: #FFFFFF;
   border-radius: 1px;
@@ -199,17 +205,53 @@ li.side-nav {
   }
 }
 
+.appear, .disappear {
+
+  -webkit-transition: opacity 0.8s ease-in-out;
+  -moz-transition: opacity 0.8s ease-in-out;
+  -o-transition: opacity 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.disappear {
+  opacity:0;
+}
+
+.appear {
+  opacity: 1.0;
+}
+
+
+img.icon-arrow {
+  position: absolute;
+  bottom: 0;
+  right: 64px;
+  background-color: rgba(115, 26, 51, 0.8);
+
+  width: 10%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 75px;
+}
+
+img.icon-phone {
+  height: 50px;
+  position: relative;
+}
+
+
 ///////////////////////////////////////////////////////////////////////////////////
 ////////////////////// Slide 1 ///////////////////////////////////////////////////
 ////////////////////// Store Front //////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 #slide-1 .bcg {
-  background: url("ottos-without-text.jpg");
-  background-size: auto 100%;
+  background: url("otto-splash.jpg");
+  background-size: auto 115%;
 }
 
 #slide-1 .hsContent {
   padding: 0px 0px;
+  vertical-align:middle;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -218,12 +260,12 @@ li.side-nav {
 ////////////////////////////////////////////////////////////////////////////////
 #slide-2 .bcg {
   background: none;
-  background-color: #010101;
+  // background-color: #010101;
   text-align: center;
 }
 
 .video-js .vjs-tech {
-  position: relative !important;
+  position: relative;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -343,25 +385,162 @@ div.info {
 
 ///////////////////////////////////////////////////////////////////////////////////
 ////////////////////// Slide 5 ///////////////////////////////////////////////////
-///////////////////// Appliances //////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-#circle {
-  width: 100px;
-  border-radius: 50%;
-  height: 100px;
-  display: inline-block;
-}
-
-#circle .bcg {
-  background-image: url("/appliance-icons/cooktop.png");
-  border-radius: 50%;
-}
-
-///////////////////////////////////////////////////////////////////////////////////
-////////////////////// Slide 5 ///////////////////////////////////////////////////
 ///////////////////// Services //////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+
+.services-image {
+  -moz-perspective: 500px;
+  -webkit-perspective: 500px;
+  -o-perspective: 500px;
+  -ms-perspective: 500px;
+  perspective: 500px;
+  &:before {
+    -moz-transition: transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
+    -webkit-transition: transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
+    -o-transition: transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
+    -ms-transition: transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
+  }
+  &:after {
+    -moz-transition: opacity 0.25s ease-in-out;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+    background-color: #22313F;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    z-index: 1000000;
+  }
+
+}
+
+.appliances-image:hover:before {
+  -moz-transform: translateZ(1em);
+  -webkit-transform: translateZ(1em);
+  -o-transform: translateZ(1em);
+  -ms-transform: translateZ(1em);
+  transform: translateZ(1em);
+}
+
+.appliances-image:hover:after {
+  opacity: .5;
+}
+
+a.appliance-icons {
+  -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  border-bottom: dotted 1px;
+  text-decoration: none;
+}
+
+a.appliance-icons:hover {
+  border-bottom-color: transparent;
+}
+
+a.appliances-icon {
+
+  &:before {
+    position: absolute;
+
+    font-size: 115px;
+    width: 100%;
+    bottom: 35%;
+
+  }
+
+  &:after {
+    -moz-transition: opacity 0.25s ease-in-out;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+    background-color: #22313F;
+    content: '';
+    display: block;
+    height: 275px;
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000000;
+  }
+}
+
+
+section#appliances .content {
+  position: relative;
+  float: right;
+}
+
+section#appliances .content h4 {
+
+}
+
+section#services {
+  padding: 50px 0px;
+}
+
+section.service {
+  margin-top: 150px;
+}
+
+#appliances .bcg {
+  background-image: url("thermador-oven-classic3.jpg");
+}
+
+.fa-wrench {
+
+  -moz-perspective: 500px;
+  -webkit-perspective: 500px;
+  -o-perspective: 500px;
+  -ms-perspective: 500px;
+  perspective: 500px;
+}
+
+.fa-wrench:before {
+  z-index: 80000000;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none !important;
+}
+
+.fa-wrench:hover:before {
+  -moz-transform: translateZ(1em);
+  -webkit-transform: translateZ(1em);
+  -o-transform: translateZ(1em);
+  -ms-transform: translateZ(1em);
+  transform: translateZ(1em);
+}
+
+.fa-wrench:hover:after {
+  opacity: .6;
+}
+
+
+
+
+
+
+
+
+
+
 
 .curtainContainer {
   width: 100%;
@@ -389,6 +568,13 @@ div.info {
   text-align: center;
 
 }
+
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////// Slide 5 ///////////////////////////////////////////////////
+///////////////////// Services //////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
 
 #slide-5 .bcg {background-image:url('golden-gate.jpg')}
 
