@@ -2,7 +2,6 @@ $( document ).ready(function() {
 
 
 
-
   var infowindow, latlng, map, marker1, options;
 
   latlng = new google.maps.LatLng(37.6132591, -122.4047675);
@@ -40,14 +39,10 @@ $( document ).ready(function() {
   /*! viewportSize | Author: Tyson Matanich, 2013 | License: MIT */
   (function(n){n.viewportSize={},n.viewportSize.getHeight=function(){return t("Height")},n.viewportSize.getWidth=function(){return t("Width")};var t=function(t){var f,o=t.toLowerCase(),e=n.document,i=e.documentElement,r,u;return n["inner"+t]===undefined?f=i["client"+t]:n["inner"+t]!=i["client"+t]?(r=e.createElement("body"),r.id="vpw-test-b",r.style.cssText="overflow:scroll",u=e.createElement("div"),u.id="vpw-test-d",u.style.cssText="position:absolute;top:-1000px",u.innerHTML="<style>@media("+o+":"+i["client"+t]+"px){body#vpw-test-b div#vpw-test-d{"+o+":7px!important}}<\/style>",r.appendChild(u),i.insertBefore(r,e.head),f=u["offset"+t]==7?i["client"+t]:n["inner"+t],i.removeChild(r)):f=n["inner"+t],f}})(this);
 
-  /**
-  * How to create a parallax scrolling website
-  * Author: Petr Tichy
-  * URL: www.ihatetomatoes.net
-  * Article URL: http://ihatetomatoes.net/how-to-create-a-parallax-scrolling-website/
-  */
 
   ( function( $ ) {
+
+    // console.log("caller of function($):", $(this));
 
     // Setup variables
     $window = $(window);
@@ -72,7 +67,10 @@ $( document ).ready(function() {
       }, 800);
     });
 
+
     function adjustWindow(){
+
+      // console.log("caller of adjustWindow:", $(this));
 
       // Init Skrollr
       var s = skrollr.init({
@@ -83,13 +81,33 @@ $( document ).ready(function() {
           var plusOne;
           var difference;
 
-          console.log("offset", $('ul.side-nav').offset());
+          if(data.curTop>=275) {
+            $("ul#side-nav").removeClass("disappear").addClass("appear");
+          }
+          else {
 
-          if(data.curTop <= 608) {
-            if($('ul.side-nav').css("top","678px")) {
+            $("#ulside-nav").removeClass("appear").addClass("disappear");
+          }
+
+
+            //  if ($("#Slider").hasClass("slideup"))
+            //    $("#Slider").removeClass("slideup").addClass("slidedown");
+            //  else
+            //      $("#Slider").removeClass("slidedown").addClass("slideup");
+
+
+
+          // console.log("offset", $('ul.side-nav').offset());
+
+          if(data.curTop <= 375) {
+            if($('ul.side-nav').css("top","450px")) {
 
               difference = data.curTop;
+
+
+
               string="translateY(-"+difference+"px)";
+              console.log("difference = data.curTop: ", difference);
 
               $("ul.side-nav").css({
                 transform: string,
@@ -100,9 +118,6 @@ $( document ).ready(function() {
             }
           }
 
-
-
-
           //Debugging - Log the current scroll position.
           // {curTop: 0, lastTop: -1, maxTop: 1123.8, direction: "down"}
           console.log("AdjustWindow - current scroll position: ", data.curTop);
@@ -110,15 +125,19 @@ $( document ).ready(function() {
 
 
         }
+
       });
 
       // Get window size
-      winH = $window.height();
+      winH = 450;
 
-      // Keep minimum height 550
-      if(winH <= 550) {
-        winH = 550;
-      }
+
+      // $window.height();
+      //
+      //
+      // if(winH >= 500) {
+      //   winH=450;
+      // }
 
       // Resize our slides
 
@@ -126,32 +145,29 @@ $( document ).ready(function() {
       console.log("homeslide height", $slide.height());
 
       $slide2.height(winH*(1.5));
-      console.log("homeslide2 height", $slide.height());
+      // console.log("homeslide2 height", $slide.height());
 
 
       $slideTall.height(winH*2);
-      console.log("homeslide tall height", $slideTall.height());
+      // console.log("homeslide tall height", $slideTall.height());
 
       $slideTall2.height(winH*3);
-      console.log("homeslide tall2 height", $slideTall2.height());
+      // console.log("homeslide tall2 height", $slideTall2.height());
 
       $slideShort.height(winH/2);
-      console.log("short slide height", $slideShort.height());
+      // console.log("short slide height", $slideShort.height());
 
       $slideShort2.height(winH/(1.5));
-      console.log("short slide height", $slideShort.height());
+      // console.log("short slide height", $slideShort2.height());
 
       // Refresh Skrollr after resizing our sections
       s.refresh($('.homeSlide'));
-      console.log($('.homeSlideShort'));
-      console.log($('.homeSlideShort').height());
-
-      console.log($('.homeSlideTall'));
-      console.log($('.homeSlideTall').height());
 
     }
 
   } )( jQuery );
+console.log("end of jquery thing");
+
 });
 
 /*!

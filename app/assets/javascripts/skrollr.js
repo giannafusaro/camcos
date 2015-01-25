@@ -52,7 +52,7 @@
 
   var DEFAULT_SKROLLRBODY = 'skrollr-body';
 
-  var DEFAULT_SMOOTH_SCROLLING_DURATION = 200;//ms
+  var DEFAULT_SMOOTH_SCROLLING_DURATION = 0;//ms
 
   var ANCHOR_START = 'start';
   var ANCHOR_END = 'end';
@@ -1777,4 +1777,3 @@
     }
 
   }(window, document));
-  
