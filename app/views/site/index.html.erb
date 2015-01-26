@@ -7,7 +7,7 @@
   <main>
     <div >
       <ul id="side-nav" class="side-nav container serif-font pink disappear">
-        <li class="side-nav 1"><%= image_tag "old-fashioned-telephone.png", class: "icon icon-phone" %></li>
+        <li class="side-nav 1"><%= image_tag "telephone-48.png", class: "icon icon-phone" %></li>
         <li class="side-nav 2">About</li>
         <li class="side-nav 3">Services</li>
         <li class="side-nav 4">Reviews</li>
@@ -18,11 +18,11 @@
     <section id="slide-1" class="homeSlide">
       <div class="bcg" data-center="background-position: 30% 450px;" data-top-bottom="background-position: 30% 500px;" data-anchor-target="#slide-1">
         <div class="hsContainer">
-          <div class="hsContent is-center" data-anchor-target="#slide-1 h1">
+          <div class="hsContent is-center white" data-anchor-target="#slide-1 h1">
 
 
-            <h1 class="splash-head white">Otto's Appliance Service, Inc.</h1>
-            <h3 class="subhead white">Serving prompt, reliable appliance repairs since 1957.</h3>
+            <h1 class="splash head">Otto's Appliance Service, Inc.</h1>
+            <h3 class="splash subhead">Serving prompt, reliable appliance repairs since 1957.</h3>
 
             <%= image_tag "arrow-down2.png", class: "icon icon-arrow" %>
           </div>
@@ -64,33 +64,72 @@
       </div>
     </section>
 
-    <section id="services" class="homeSlide homeSlideTall slide">
+    <section id="services" class="homeSlide homeSlideTall2 slide">
       <div class="hsContainer">
-        <div class="hsContent white">
+        <div class="hsContent">
 
           <h2 class="pink">Services<hr class="divider"/></h2>
 
-          <section id="appliances" class="service service-appliances">
-            <a class="icon appliances-icon fa fa-wrench fa-3x white is-center">
-              <%= image_tag "thermador-oven-classic4.jpg", class: "services-image" %>
+          <section id="appliances" class="service service-left">
+            <a class="icon service-icon fa fa-wrench fa-3x white is-center">
+              <%= image_tag "thermador-oven-knobs2.jpg", class: "service-image" %>
             </a>
             <div class="content">
-              <h4 class="blue">Appliances We Fix</h4>
+              <h3 class="blue">Appliances We Fix</h3>
+              <ul class="appliances">
+                <li class="appliance">
+                  <%= image_tag  "appliance-icons/oven.png", class: "appliance-icon" %> Ovens
+                </li>
+                <li class="appliance">
+                  <%= image_tag  "appliance-icons/cooktop.png", class: "appliance-icon" %> Cooktops
+                </li>
+                <li class="appliance">
+                  <%= image_tag  "appliance-icons/microwave.png", class: "appliance-icon" %> Microwaves
+                </li>
+              </ul>
+              <ul class="appliances">
+                <li class="appliance">
+                  <%= image_tag  "appliance-icons/range_hood.png", class: "appliance-icon" %> Hoods
+                </li>
+                <li class="appliance">
+                  <%= image_tag  "appliance-icons/range.png", class: "appliance-icon" %> Ranges
+                </li>
+                <li class="appliance">
+                  <%= image_tag  "appliance-icons/washer.png", class: "appliance-icon" %> Washers
+                </li>
+              </ul>
+              <ul class="appliances">
+                <li class="appliance">
+                  <%= image_tag  "appliance-icons/dryer.png", class: "appliance-icon" %> Dryers
+                </li>
+                <li class="appliance">
+                  <%= image_tag  "appliance-icons/disposal.png", class: "appliance-icon" %> Disposals
+                </li>
+                <li class="appliance">
+                  <%= image_tag  "appliance-icons/hot-water-dispenser.png", class: "appliance-icon" %> Dispensers
+                </li>
+              </ul>
             </div>
           </section>
 
-            <section class="service service-brands">
-              <a class="icon brands-icon">
-                <h6 class="blue">Brands We Repair</h6>
-              </a>
-            </section>
+          <section id="brands" class="service service-right">
+            <a class="icon service-icon fa fa-wrench fa-3x white is-center">
+              <%= image_tag "thermador-oven-classic4.jpg", class: "service-image" %>
+            </a>
+            <div class="content">
+              <h3 class="blue">Brands We Repair</h3>
+            </div>
+          </section>
 
 
-            <section class="service service-locations">
-              <a class="icon locations-icon">
-                <h6 class="blue">Locations We Service</h6>
-              </a>
-            </section>
+          <section id="locations" class="service service-left">
+            <a class="icon service-icon fa fa-truck fa-3x white is-center">
+              <%= image_tag "golden-gate4.jpg", class: "service-image" %>
+            </a>
+            <div class="content">
+              <h3 class="blue">Locations We Service</h3>
+            </div>
+          </section>
         </div>
       </div>
     </section>
@@ -104,30 +143,27 @@
 
             <h2 class="white">Contact Us <hr class="divider"/></h2>
 
-            <div class="contact-container">
+            <div class="contact container">
               <div class="hours">
                 8am - 5pm, Monday - Thursday
                 <br/> 8am - 3pm, Friday
                 <br/><span class="hours closed">(Closed 12-1pm)</span>
               </div>
-              <%= image_tag  "yelp-logo.png", class: "social-media" %>
-              <%= image_tag  "facebook-logo.png", class: "social-media" %>
+              <div class="social-media">
+                <%= image_tag  "yelp-logo.png", class: "social-media" %>
+                <%= image_tag  "facebook-logo.png", class: "social-media" %>
+              </div>
             </div>
 
-            <div id="phone">650.588.0309</div>
+            <h1 class="container" id="phone">650.588.0309</h1>
 
-            <div class="ottos-info">
-
+            <div class="ottos-info container">
               <div class="ottos-info address">
                 1663 El Camino Real Millbrae, CA 94030
               </div>
-
-
               <div class="ottos-info email">
                 services@ottosappliance.com
               </div>
-
-
             </div>
 
             <div id="google-map"> </div>
