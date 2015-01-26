@@ -1,6 +1,14 @@
 $( document ).ready(function() {
 
-
+  var MYGLOBALS = function() {
+    var globals = {
+      splashHeight : $(window).height(),
+    }
+    return { getValue : function(s) {
+      return globals[s];
+      }
+    }
+  }();
 
   var infowindow, latlng, map, marker1, options;
 
@@ -52,6 +60,7 @@ $( document ).ready(function() {
     $slideShort = $('.homeSlideShort');
     $slideShort2 = $('.homeSlideShort2');
     $slide2 = $('.homeSlide2');
+    $slideSplash = $('.homeSlideSplash');
     $body = $('body');
 
     //FadeIn all sections
@@ -81,13 +90,6 @@ $( document ).ready(function() {
           var plusOne;
           var difference;
 
-          if(data.curTop>=275) {
-            $("ul#side-nav").removeClass("disappear").addClass("appear");
-          }
-          else {
-
-            $("#ulside-nav").removeClass("appear").addClass("disappear");
-          }
 
 
             //  if ($("#Slider").hasClass("slideup"))
@@ -99,12 +101,11 @@ $( document ).ready(function() {
 
           // console.log("offset", $('ul.side-nav').offset());
 
-          if(data.curTop <= 375) {
-            if($('ul.side-nav').css("top","450px")) {
+          splashHeight = MYGLOBALS.getValue('splashHeight');
+          if(data.curTop <= (splashHeight - 75)) {
+            if($('ul.side-nav').css("top",  + splashHeight + "px")) {
 
               difference = data.curTop;
-
-
 
               string="translateY(-"+difference+"px)";
               console.log("difference = data.curTop: ", difference);
@@ -131,8 +132,9 @@ $( document ).ready(function() {
       // Get window size
       winH = 450;
 
+      splashHeight = $window.height();
 
-      // $window.height();
+      // $slideSplash.height(splashHeight);
       //
       //
       // if(winH >= 500) {
@@ -159,6 +161,8 @@ $( document ).ready(function() {
 
       $slideShort2.height(winH/(1.5));
       // console.log("short slide height", $slideShort2.height());
+
+      $slideSplash.height(splashHeight);
 
       // Refresh Skrollr after resizing our sections
       s.refresh($('.homeSlide'));
