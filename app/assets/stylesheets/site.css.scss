@@ -1,12 +1,9 @@
-/* ==========================================================================
-Parallax Scroll
-========================================================================== */
-/* line 9, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
 body, html {
   height: 100%;
   min-height: 100%;
   // background-color: #fff;
-  font-family: 'Actor';
+  font-family: 'Open Sans';
+  font-size: 100%;
 }
 
 /* line 17, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
@@ -21,7 +18,6 @@ body, html {
 
 /* line 26, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
 section {
-  min-width: 960px;
   opacity: 0;
 }
 
@@ -66,7 +62,7 @@ main {
   max-width: 450px;
   margin: -150px auto 0 auto;
   display: table-cell;
-  padding: 0px 8%;
+  padding: 40px 219.2px;
 }
 
 .is-center {
@@ -74,56 +70,28 @@ main {
 }
 
 
-// font-family: 'Averia Gruesa Libre', cursive; --
-// font-family: 'Andada', serif; pretty good
-// font-family: 'Cutive', serif; no
-// font-family: 'Poly', serif;
-// font-family: 'Suranna', serif;
-// font-family: 'Crimson Text', serif;
-// font-family: 'Ramaraja', serif;
-// font-family: 'Karma', serif; okay
-// font-family: 'Suravaram', serif; no
-// font-family: 'Sree Krushnadevaraya', serif;
-// font-family: 'Averia Libre', cursive; -----
-// font-family: 'Enriqueta', serif; no
-// font-family: 'Playfair Display SC', serif;
-// font-family: 'Goudy Bookletter 1911', serif; no
-// font-family: 'Goudy Bookletter 1911', serif; no
-// font-family: 'Rosarivo', serif; --------
-// font-family: 'Playfair Display', serif; ----
-// font-family: 'Overlock', cursive; ---
-// font-family: 'Halant', serif;
-// font-family: 'Marcellus SC', serif; --
-// font-family: 'Overlock SC', cursive; ----
 
-
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   margin-top: 0;
-  font-family: 'Playfair Display';
-  text-shadow: 0px 1px 2px #000;
-  text-align: center;
+  font-family: 'Antic Slab', serif;
+  text-shadow: 0px 1px 0px #000;
+  font-weight: 700;
+  letter-spacing: 0.125em;
+  line-height: 1.75em;
+}
+
+h3 {
+  font-size: 1.15em;
 }
 
 h2 {
-  font-size: 40px;
-  line-height: 1.1;
+  font-size: 2.0em;
+  line-height: 1em;
   letter-spacing: 1px;
+  margin-bottom: 3.375em;
+  text-align: center;
 }
 
-.splash-head, .subhead {
-  line-height: 48px;
-  margin-bottom: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.splash-head {
-  font-size: 55px;
-}
-
-.subhead {
-  font-size: 25px;
-}
 
 .pink {
   color: #731A33;
@@ -138,16 +106,16 @@ h2 {
 }
 
 
-.hsContent {
-  padding: 40px 279.2px;
-}
-
-
 
 .hsContent p {
   margin: 35px auto;
   color: #7f7f7f;
   font-size: 20px;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 .bgBlack {
@@ -158,7 +126,7 @@ h2 {
 .divider {
   border: 0;
   height: 0;
-  border-top: 3px solid rgba(72, 71, 71, 0.62);
+  border-top: 2px solid rgba(72, 71, 71, 0.62);
   border-bottom: 1px solid rgba(255, 255, 255, 1);
   width: 50%;
 }
@@ -171,7 +139,7 @@ h2 {
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////// Side Navbar /////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
-ul.side-nav.container {
+ul.side-nav {
   position: fixed;
   top: 450px;
   right: 5%;
@@ -193,7 +161,7 @@ li.side-nav {
   padding: 15px;
   margin: 0px;
   z-index: 15;
-  font-size: 22px;
+  font-size: 1em;
   background-color: rgba(115, 26, 51, 1.0);
   text-shadow: 0px 2px 3px #2C2A2A;
   color: #FFFFFF;
@@ -235,7 +203,7 @@ img.icon-arrow {
 }
 
 img.icon-phone {
-  height: 50px;
+  width: inherit;
   position: relative;
 }
 
@@ -244,6 +212,8 @@ img.icon-phone {
 ////////////////////// Slide 1 ///////////////////////////////////////////////////
 ////////////////////// Store Front //////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+
 #slide-1 .bcg {
   background: url("otto-splash.jpg");
   background-size: auto 115%;
@@ -251,7 +221,16 @@ img.icon-phone {
 
 #slide-1 .hsContent {
   padding: 0px 0px;
-  vertical-align:middle;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 3.75em;
+  line-height: 1em;
+}
+
+#slide-1 .splash {
+  font-family: 'PT Serif Caption', serif;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -285,51 +264,46 @@ img.icon-phone {
   height: 310px;
   text-align: center;
   z-index: 100;
+  width: 100%;
 }
 
 #phone {
-  margin: 15px 0px 10px 0px;
-  color: #fff;
   text-shadow: 0px 2px 1px rgba(0,0,0,0.4), 0px 6px 11px rgba(0,0,0,0.1), 0px 16px 21px rgba(0,0,0,0.1);
-  font-size: 55px;
   letter-spacing: 2px;
-  font-family: 'Averia Gruesa Libre';
 }
 
-.ottos-info div {
-  display: block;
-}
 
-.ottos-info {
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
-  padding: 0px;
-}
-
-div.contact-container {
-  height: 88px;
+div.container {
+  @include clearfix;
+  margin: 30px 0px;
+  width: 100%;
 }
 
 span.hours {
-  font-size: 15px;
+
   width: 100%;
 }
 
 .hours {
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
-  font-size: 20px;
+
   float: left;
   position: relative;
   text-align: center;
   letter-spacing: 3px;
   line-height: 30px;
   left: 0px;
+  width: 60%;
 }
 
-img.social-media {
+div.social-media {
+  float: right;
   position: relative;
-  left: 0px;
-  top: 15px;
-  padding: 0px 10px;
+  width: 40%;
+  text-align: left;
+}
+img.social-media {
+  padding: 0px 15px;
   height: 50px;
   z-index: 100;
   border-radius: 25%;
@@ -340,39 +314,42 @@ img.social-media:hover {
   border-shadow: 1px 1px 1px #fff;
 }
 
+.ottos-info {
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+  padding: 0px;
+}
+
+
 .email {
+  text-align: left;
   letter-spacing: 2px;
   float: right;
-  right: 49px;
-  line-height: 80px;
   position: relative;
   &:after {
     content: '';
     border-left: 1px solid #C2C2C2;
     position: absolute;
-    height: 40px;
-    left: -10px;
-    top: 20px;
+    height: 2.5em;
+    left: 0em;
+    top: 0em;
   }
-
 }
 
 .address {
+  text-align: right;
   float: left;
-  left: 18px;
-  line-height: 80px;
   position: relative;
 }
 
 .email, .address {
-  font-size: 20px;
-  font-family: 'Actor';
+  width: 50%;
+  padding: 0.625em;
 }
 
 #google-map {
   height: 230px;
   border-radius: 10px;
-  margin-top: 100px;
+  margin: 30px 0px;
 }
 
 div.info {
@@ -388,8 +365,29 @@ div.info {
 ///////////////////// Services //////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+section#services {
+  &:first-of-type {
+    padding-top: 50px 0px;
+  }
+}
 
-.services-image {
+section.service {
+  @include clearfix;
+
+}
+
+.service-right a {
+  float: right;
+}
+
+.service-left a {
+  float: left;
+}
+
+
+.service-image {
+  width: 100%;
+  height: 312px;
   -moz-perspective: 500px;
   -webkit-perspective: 500px;
   -o-perspective: 500px;
@@ -411,55 +409,31 @@ div.info {
     background-color: #22313F;
     content: '';
     display: block;
-    height: 100%;
+    height: 312px;
     left: 0;
     opacity: 0.2;
     position: absolute;
     top: 0;
     width: 100%;
-
+    height: 100%;
     z-index: 1000000;
   }
-
 }
 
-.appliances-image:hover:before {
-  -moz-transform: translateZ(1em);
-  -webkit-transform: translateZ(1em);
-  -o-transform: translateZ(1em);
-  -ms-transform: translateZ(1em);
-  transform: translateZ(1em);
-}
 
-.appliances-image:hover:after {
-  opacity: .5;
-}
-
-a.appliance-icons {
-  -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-  -webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-  -o-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-  -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-  border-bottom: dotted 1px;
-  text-decoration: none;
-}
-
-a.appliance-icons:hover {
+a.service-icon:hover {
   border-bottom-color: transparent;
 }
 
-a.appliances-icon {
-
+a.service-icon {
+  width: 50%;
+  height: 312px;
+  font-size: 6em;
   &:before {
     position: absolute;
-
-    font-size: 115px;
     width: 100%;
     bottom: 35%;
-
   }
-
   &:after {
     -moz-transition: opacity 0.25s ease-in-out;
     -webkit-transition: opacity 0.25s ease-in-out;
@@ -469,7 +443,7 @@ a.appliances-icon {
     background-color: #22313F;
     content: '';
     display: block;
-    height: 275px;
+    height: 312px;
     left: 0;
     opacity: 0.2;
     position: absolute;
@@ -479,30 +453,24 @@ a.appliances-icon {
   }
 }
 
+section.service .content {
+  display: inline-block;
+  width: 50%;
+  padding: 2.0em;
+  font-color: #6e6e6e;
+}
 
-section#appliances .content {
-  position: relative;
+section.service-right .content {
   float: right;
+  text-align: right;
 }
 
-section#appliances .content h4 {
-
+section.service-left .content {
+  float: left;
+  text-align: left;
 }
 
-section#services {
-  padding: 50px 0px;
-}
-
-section.service {
-  margin-top: 150px;
-}
-
-#appliances .bcg {
-  background-image: url("thermador-oven-classic3.jpg");
-}
-
-.fa-wrench {
-
+.fa-3x {
   -moz-perspective: 500px;
   -webkit-perspective: 500px;
   -o-perspective: 500px;
@@ -510,17 +478,17 @@ section.service {
   perspective: 500px;
 }
 
-.fa-wrench:before {
+.fa-3x:before {
   z-index: 80000000;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
-  text-transform: none !important;
+  text-transform: none;
 }
 
-.fa-wrench:hover:before {
+.fa-3x:hover:before {
   -moz-transform: translateZ(1em);
   -webkit-transform: translateZ(1em);
   -o-transform: translateZ(1em);
@@ -528,14 +496,30 @@ section.service {
   transform: translateZ(1em);
 }
 
-.fa-wrench:hover:after {
+.fa-3x:hover:after {
   opacity: .6;
 }
 
+ul.appliances {
+  height: 2.783em;
+  padding: 0px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-content: flex-end;
+}
 
+li.appliance {
+  list-style-type: none;
+  width: 33%;
 
+}
 
-
+.appliance-icon {
+  height: 20px;
+  vertical-align: top;
+}
 
 
 
@@ -639,22 +623,3 @@ section.service {
   opacity: 0;
   z-index: 2;
 }
-
-
-////////////////
-///////////////
-/// font-family: 'Numans', sans-serif;
-// font-family: 'Spinnaker', sans-serif;
-// font-family: 'PT Sans Caption', sans-serif;
-// font-family: 'Comfortaa', cursive;
-// font-family: 'Droid Sans Mono', ;
-// font-family: 'Dosis', sans-serif;
-// font-family: 'Arvo', serif;
-// font-family: 'Cabin', sans-serif;
-// font-family: 'Lora', serif;
-// font-family: 'Quicksand', sans-serif;
-// font-family: 'Muli', sans-serif;
-// font-family: 'Merriweather', serif;
-// font-family: 'Titillium Web', sans-serif;
-// font-family: 'Francois One', sans-serif;
-// font-family: 'Inconsolata', ;
