@@ -81,6 +81,10 @@ h2, h3, h4, h5, h6 {
 }
 
 h3 {
+  font-weight: 700;
+  letter-spacing: 0.125em;
+  line-height: 1.75em;
+  text-transform: uppercase;
   font-size: 1.15em;
 }
 
@@ -109,7 +113,7 @@ h2 {
 
 .hsContent p {
   margin: 35px auto;
-  color: #7f7f7f;
+  color: #6e6e6e;
   font-size: 20px;
   padding: 0;
   border: 0;
@@ -458,16 +462,15 @@ section.service .content {
   width: 50%;
   padding: 2.0em;
   font-color: #6e6e6e;
+  text-align: center;
 }
 
 section.service-right .content {
   float: right;
-  text-align: right;
 }
 
 section.service-left .content {
   float: left;
-  text-align: left;
 }
 
 .fa-3x {
@@ -510,10 +513,14 @@ ul.appliances {
   align-content: flex-end;
 }
 
-li.appliance {
+li {
   list-style-type: none;
-  width: 33%;
+}
 
+li.appliance {
+  color: #5b5b5b;
+  text-align: left;
+  width: 33%;
 }
 
 .appliance-icon {
@@ -521,6 +528,28 @@ li.appliance {
   vertical-align: top;
 }
 
+ul.brands {
+  height: 2.783em;
+  padding: 0px;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 8px;
+}
+
+li.brand {
+  flex: 1;
+  align-self: center;
+  width: 50%;
+  margin: auto;
+}
+
+.brand-logo {
+  width: 60%;
+}
+
+#auth-label {
+  position: absolute;
+}
 
 
 
