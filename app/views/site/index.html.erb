@@ -65,71 +65,106 @@
     </section>
 
     <section id="services" class="homeSlide homeSlideTall2 slide">
-      <div class="hsContainer">
-        <div class="hsContent">
+      <div class="bcg" data-anchor-target="#services">
+        <div class="hsContainer">
+          <div class="hsContent">
 
-          <h2 class="pink">Services<hr class="divider"/></h2>
+            <h2 class="pink">Services<hr class="divider"/></h2>
 
-          <section id="appliances" class="service service-left">
-            <a class="icon service-icon fa fa-wrench fa-3x white is-center">
-              <%= image_tag "service-appliances-pic.jpg", class: "service-image" %>
-            </a>
-            <div class="content">
-              <h3 class="blue">Appliances We Fix</h3>
-              <ul class="appliances">
-                <li class="appliance">
-                  <%= image_tag  "appliance-icons/oven.png", class: "appliance-icon" %> Ovens
-                </li>
-                <li class="appliance">
-                  <%= image_tag  "appliance-icons/cooktop.png", class: "appliance-icon" %> Cooktops
-                </li>
-                <li class="appliance">
-                  <%= image_tag  "appliance-icons/microwave.png", class: "appliance-icon" %> Microwaves
-                </li>
-              </ul>
-              <ul class="appliances">
-                <li class="appliance">
-                  <%= image_tag  "appliance-icons/range_hood.png", class: "appliance-icon" %> Hoods
-                </li>
-                <li class="appliance">
-                  <%= image_tag  "appliance-icons/range.png", class: "appliance-icon" %> Ranges
-                </li>
-                <li class="appliance">
-                  <%= image_tag  "appliance-icons/washer.png", class: "appliance-icon" %> Washers
-                </li>
-              </ul>
-              <ul class="appliances">
-                <li class="appliance">
-                  <%= image_tag  "appliance-icons/dryer.png", class: "appliance-icon" %> Dryers
-                </li>
-                <li class="appliance">
-                  <%= image_tag  "appliance-icons/disposal.png", class: "appliance-icon" %> Disposals
-                </li>
-                <li class="appliance">
-                  <%= image_tag  "appliance-icons/hot-water-dispenser.png", class: "appliance-icon" %> Dispensers
-                </li>
-              </ul>
-            </div>
-          </section>
+            <section id="appliances" class="service service-left">
+              <a class="icon service-icon fa fa-wrench fa-3x white is-center">
+                <%= image_tag "service-appliances-pic.jpg", class: "service-image" %>
+              </a>
+              <div class="content">
+                <h3 class="blue">Appliances We Fix</h3>
+                <ul class="appliances">
+                  <li class="appliance">
+                    <%= image_tag  "appliance-icons/oven.png", class: "appliance-icon" %> <span>Ovens</span>
+                  </li>
+                  <li class="appliance">
+                    <%= image_tag  "appliance-icons/cooktop.png", class: "appliance-icon" %> <span>Cooktops</span>
+                  </li>
+                  <li class="appliance">
+                    <%= image_tag  "appliance-icons/microwave.png", class: "appliance-icon" %> <span>Microwaves</span>
+                  </li>
+                </ul>
+                <ul class="appliances">
+                  <li class="appliance">
+                    <%= image_tag  "appliance-icons/range_hood.png", class: "appliance-icon" %> <span>Hoods</span>
+                  </li>
+                  <li class="appliance">
+                    <%= image_tag  "appliance-icons/range.png", class: "appliance-icon" %> <span>Ranges</span>
+                  </li>
+                  <li class="appliance">
+                    <%= image_tag  "appliance-icons/washer.png", class: "appliance-icon" %> <span>Washers</span>
+                  </li>
+                </ul>
+                <ul class="appliances">
+                  <li class="appliance">
+                    <%= image_tag  "appliance-icons/dryer.png", class: "appliance-icon" %> <span>Dryers</span>
+                  </li>
+                  <li class="appliance">
+                    <%= image_tag  "appliance-icons/disposal.png", class: "appliance-icon" %> <span>Disposals</span>
+                  </li>
+                  <li class="appliance">
+                    <%= image_tag  "appliance-icons/hot-water-dispenser.png", class: "appliance-icon" %> <span>Dispensers</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
 
-          <section id="brands" class="service service-right">
-            <a class="icon service-icon fa fa-tags fa-3x white is-center">
-              <%= image_tag "insinkerator-lineup.jpg", class: "service-image" %>
-            </a>
-            <div class="content">
-              <h3 class="blue">Brands We Repair</h3>
-            </div>
-          </section>
+            <section id="brands" class="service service-right">
+              <a class="icon service-icon fa fa-tags fa-3x white is-center">
+                <%= image_tag "insinkerator-lineup.jpg", class: "service-image" %>
+              </a>
+              <div class="content">
+                <h3 class="blue">Brands We Repair</h3>
+                <div id="auth-label"><i class="fa fa-star">Factory Authorized Service</i></div>
+                <ul class="brands brands-authorized">
+                  <li class="brand">
+                    <%= image_tag  "Thermador.png", class: "brand-logo" %>
+                  </li>
+                  <li class="brand">
+                    <%= image_tag  "Bosch.png", class: "brand-logo" %>
+                  </li>
+                </ul>
+                <ul class="brands">
+                  <li class="brand">
+                    <%= image_tag  "Insinkerator.png", class: "brand-logo" %>
+                  </li>
+                  <li class="brand">
+                    <%= image_tag  "GE_Appliances.png", class: "brand-logo" %>
+                  </li>
+                </ul>
+                <ul class="brands">
+                  <li class="brand">
+                    <%= image_tag  "Maytag.png", class: "brand-logo" %>
+                  </li>
+                  <li class="brand">
+                    <%= image_tag  "Kitchenaid.png", class: "brand-logo" %>
+                  </li>
+                </ul>
+                <ul class="brands">
+                  <li class="brand">
+                    <%= image_tag  "Kenmore.png", class: "brand-logo" %>
+                  </li>
+                  <li class="brand">
+                    <%= image_tag  "Whirlpool.png", class: "brand-logo" %>
+                  </li>
+                </ul>
+              </div>
+            </section>
 
 
-          <section id="locations" class="service service-left">
-            <a class="icon service-icon fa fa-truck fa-3x white is-center">
-              <%= image_tag "golden-gate4.jpg", class: "service-image" %>
-            </a>
-            <div class="content">
-              <h3 class="blue">Locations We Service</h3>
-            </div>
-          </section>
+            <section id="locations" class="service service-left">
+              <a class="icon service-icon fa fa-truck fa-3x white is-center">
+                <%= image_tag "golden-gate4.jpg", class: "service-image" %>
+              </a>
+              <div class="content">
+                <h3 class="blue">Locations We Service</h3>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </section>
