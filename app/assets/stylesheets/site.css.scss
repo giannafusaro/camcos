@@ -1,654 +1,139 @@
+@include font-face(My-Font, '/fonts/my_font/MyFont-Italic', normal, italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Averia+Gruesa+Libre);
+@import url(http://fonts.googleapis.com/css?family=Lato|Antic+Slab|PT+Serif+Caption|Open+Sans:300italic,400|Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+@import url(http://fonts.googleapis.com/css?family=Spinnaker);
+
+
 body, html {
-  height: 100%;
-  min-height: 100%;
-  // background-color: #fff;
   font-family: 'Open Sans';
   font-size: 100%;
+  width: 100%;
+  background-color: #FBFBFB;
+  text-shadow: 0px 0px 0px #393939;
 }
 
-/* line 17, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
-.no-js {
-  padding-top: 106px;
-}
-
-/* line 23, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
-.loading {
-
-}
-
-/* line 26, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
-section {
-  opacity: 0;
-}
-
-/* line 31, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
-.loaded section,
-.no-js section {
-  opacity: 1;
-  -webkit-transition: opacity 300ms ease-out;
-  -moz-transition: opacity 300ms ease-out;
-  transition: opacity 300ms ease-out;
-}
-
-/* line 37, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
 main {
-  overflow-x: hidden;
+  display: inline-block;
+  @include fill-parent();
 }
 
+h1, h2, h3 {
 
-/* line 41, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
-.bcg {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}
-
-
-/* line 73, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
-.hsContainer {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-/* line 82, /Users/giannafusaro/Dev/Camcos/app/assets/stylesheets/site.css.scss */
-.hsContent {
-  max-width: 450px;
-  margin: -150px auto 0 auto;
-  display: table-cell;
-  padding: 40px 219.2px;
-}
-
-.is-center {
-  text-align: center;
-}
-
-
-
-h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  font-family: 'Antic Slab', serif;
-  text-shadow: 0px 1px 0px #000;
-  font-weight: 700;
-  letter-spacing: 0.125em;
-  line-height: 1.75em;
-}
-
-h3 {
-  font-weight: 700;
-  letter-spacing: 0.125em;
-  line-height: 1.75em;
-  text-transform: uppercase;
-  font-size: 1.15em;
-}
-
-h2 {
-  font-size: 2.0em;
-  line-height: 1em;
-  letter-spacing: 1px;
-  margin-bottom: 3.375em;
-  text-align: center;
-}
-
-
-.pink {
-  color: #731A33;
-}
-
-.blue {
-  color: #22313F;
-}
-
-.white {
-  color: rgb(255, 255, 255);
-}
-
-
-
-.hsContent p {
-  margin: 35px auto;
-  color: #6e6e6e;
-  font-size: 20px;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-.bgBlack {
-  // background-color: rgba(0, 0, 0, 0.75);
-  padding: 3px 10px;
-}
-
-.divider {
-  border: 0;
-  height: 0;
-  border-top: 2px solid rgba(72, 71, 71, 0.62);
-  border-bottom: 1px solid rgba(255, 255, 255, 1);
-  width: 50%;
-}
-
-
-///// rgb(34,49,63) - blue
-/// rgb(63,34,49) - pink (accent)
-/// rgb(49,63,34) green (Heading)
-
-///////////////////////////////////////////////////////////////////////////////////
-//////////////////////// Side Navbar /////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////
-ul.side-nav {
-  position: fixed;
-  top: 450px;
-  right: 5%;
-  width: 10%;
-  height: 400px;
-  margin: 0px;
-  padding: 0px;
-  list-style-type: none;
-  text-align: center;
-  z-index: 999;
-  outline: 1px solid transparent;
-}
-
-
-li.side-nav {
-
-  position: relative;
-  height: 70px;
-  padding: 15px;
-  margin: 0px;
-  z-index: 15;
-  font-size: 1em;
-  background-color: rgba(115, 26, 51, 1.0);
-  text-shadow: 0px 2px 3px #2C2A2A;
-  color: #FFFFFF;
-  border-radius: 1px;
-
-  &:hover {
-  //  background-color: rgb(166,166,166);
-    background-color: rgba(44, 42, 42, .85);
-  }
-}
-
-.appear, .disappear {
-
-  -webkit-transition: opacity 0.8s ease-in-out;
-  -moz-transition: opacity 0.8s ease-in-out;
-  -o-transition: opacity 0.8s ease-in-out;
-  transition: opacity 0.8s ease-in-out;
-}
-
-.disappear {
-  opacity:0;
-}
-
-.appear {
-  opacity: 1.0;
-}
-
-
-img.icon-arrow {
-  position: absolute;
-  bottom: 0;
-  right: 64px;
-  background-color: rgba(115, 26, 51, 0.8);
-
-  width: 10%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  height: 75px;
-}
-
-img.icon-phone {
-  width: inherit;
-  position: relative;
-}
-
-
-///////////////////////////////////////////////////////////////////////////////////
-////////////////////// Slide 1 ///////////////////////////////////////////////////
-////////////////////// Store Front //////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-
-#slide-1 .bcg {
-  background: url("ottos-splash2.jpg");
-  background-size: auto 115%;
-}
-
-#slide-1 .hsContent {
-  padding: 15% 0px;
-  vertical-align: top;
+  text-shadow: 0px 1px 1px #bababa;
 }
 
 h1 {
-  font-size: 3.75em;
-  line-height: 1em;
+
+  font-size: 3.25em;
 }
 
-#slide-1 .splash {
-  font-family: 'PT Serif Caption', serif;
-}
-
-///////////////////////////////////////////////////////////////////////////////////
-////////////////////// Slide 2 ///////////////////////////////////////////////////
-////////////////////// Video ////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-#slide-2 .bcg {
-  background: none;
-  // background-color: #010101;
-  text-align: center;
-}
-
-.video-js .vjs-tech {
-  position: relative;
-}
-
-///////////////////////////////////////////////////////////////////////////////////
-////////////////////// Slide 3 ///////////////////////////////////////////////////
-////////////////////// Tools Picture ////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-#slide-3 .bcg {
-  background-image: url("wall-of-tools.jpg");
-}
-
-///////////////////////////////////////////////////////////////////////////////////
-////////////////////// Slide 4 ///////////////////////////////////////////////////
-////////////////////// Contact //////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-#slide-4 {
-  background-color: #22313F;
-  height: 310px;
-  text-align: center;
-  z-index: 100;
-  width: 100%;
-}
-
-#phone {
-  text-shadow: 0px 2px 1px rgba(0,0,0,0.4), 0px 6px 11px rgba(0,0,0,0.1), 0px 16px 21px rgba(0,0,0,0.1);
-  letter-spacing: 2px;
-}
-
-
-div.container {
-  @include clearfix;
-  margin: 30px 0px;
-  width: 100%;
-}
-
-span.hours {
-
-  width: 100%;
-}
-
-.hours {
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
-
-  float: left;
-  position: relative;
-  text-align: center;
-  letter-spacing: 2px;
-  line-height: 30px;
-  left: 0px;
-  width: 60%;
-}
-
-div.social-media {
-  float: right;
-  position: relative;
-  width: 40%;
-  text-align: left;
-}
-img.social-media {
-  padding: 0px 15px;
-  height: 50px;
-  z-index: 100;
-  border-radius: 25%;
-}
-
-img.social-media:hover {
-  opacity: 1;
-  border-shadow: 1px 1px 1px #fff;
-}
-
-.ottos-info {
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
-  padding: 0px;
-}
-
-
-.email {
-  text-align: left;
-  float: right;
-  position: relative;
-  &:after {
-    content: '';
-    border-left: 1px solid #C2C2C2;
-    position: absolute;
-    height: 2.5em;
-    left: 0em;
-    top: 0em;
-  }
-}
-
-.address {
-  text-align: right;
-  float: left;
-  position: relative;
-}
-
-.email, .address {
-  letter-spacing: 2px;
-  width: 50%;
-  padding: 0.625em;
-}
-
-#google-map {
-  height: 230px;
-  border-radius: 10px;
-  margin: 30px 0px;
-}
-
-div.info {
-  height: 35px;
-  width: 210px;
-  font-weight: bold;
-  font-size: 15.5px;
-  color: #000;
-}
-
-///////////////////////////////////////////////////////////////////////////////////
-////////////////////// Slide 5 ///////////////////////////////////////////////////
-///////////////////// Services //////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-section#services {
-  &:first-of-type {
-    padding-top: 50px 0px;
-  }
-}
-
-section.service {
-  @include clearfix;
-
-}
-
-.service-right a {
-  float: right;
-}
-
-.service-left a {
-  float: left;
-}
-
-
-.service-image {
-  width: 100%;
-  height: 312px;
-  -moz-perspective: 500px;
-  -webkit-perspective: 500px;
-  -o-perspective: 500px;
-  -ms-perspective: 500px;
-  perspective: 500px;
-  &:before {
-    -moz-transition: transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
-    -webkit-transition: transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
-    -o-transition: transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
-    -ms-transition: transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
-    transition: transform 0.1s ease-in-out, font-size 0.1s ease-in-out;
-  }
-  &:after {
-    -moz-transition: opacity 0.25s ease-in-out;
-    -webkit-transition: opacity 0.25s ease-in-out;
-    -o-transition: opacity 0.25s ease-in-out;
-    -ms-transition: opacity 0.25s ease-in-out;
-    transition: opacity 0.25s ease-in-out;
-    background-color: #22313F;
-    content: '';
-    display: block;
-    height: 312px;
-    left: 0;
-    opacity: 0.2;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000000;
-  }
-}
-
-
-a.service-icon:hover {
-  border-bottom-color: transparent;
-}
-
-a.service-icon {
-  width: 50%;
-  height: 312px;
-  font-size: 6em;
-  &:before {
-    position: absolute;
-    width: 100%;
-    bottom: 35%;
-  }
-  &:after {
-    -moz-transition: opacity 0.25s ease-in-out;
-    -webkit-transition: opacity 0.25s ease-in-out;
-    -o-transition: opacity 0.25s ease-in-out;
-    -ms-transition: opacity 0.25s ease-in-out;
-    transition: opacity 0.25s ease-in-out;
-    background-color: #22313F;
-    content: '';
-    display: block;
-    height: 312px;
-    left: 0;
-    opacity: 0.2;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1000000;
-  }
-}
-
-section.service .content {
-  display: inline-block;
-  width: 50%;
-  padding: 2.0em;
-  font-color: #6e6e6e;
-  text-align: center;
-}
-
-section.service-right .content {
-  float: right;
-}
-
-section.service-left .content {
-  float: left;
-}
-
-.fa-3x {
-  -moz-perspective: 500px;
-  -webkit-perspective: 500px;
-  -o-perspective: 500px;
-  -ms-perspective: 500px;
-  perspective: 500px;
-}
-
-.fa-3x:before {
-  z-index: 80000000;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: FontAwesome;
+h2 {
+  font-size: 25px;
+  margin-bottom: 1em;
   font-style: normal;
-  font-weight: normal;
-  text-transform: none;
+  font-family: 'Spinnaker';
+  color: #333;
+}
+video {
+  -webkit-box-shadow: 15px 20px 29px -10px rgba(38,34,38,1);
+  -moz-box-shadow: 15px 20px 29px -10px rgba(38,34,38,1);
+   box-shadow: 15px 20px 29px -10px rgba(38,34,38,1);
 }
 
-.fa-3x:hover:before {
-  -moz-transform: translateZ(1em);
-  -webkit-transform: translateZ(1em);
-  -o-transform: translateZ(1em);
-  -ms-transform: translateZ(1em);
-  transform: translateZ(1em);
+p {
+  padding: 2.5em;
+  color: #6e6e6e;
+
 }
 
-.fa-3x:hover:after {
-  opacity: .6;
+section.slide {
+  @include fill-parent();
+  @include outer-container();
+  @include pad (3.375em);
+  .slide-tall {
+    height: 750px;
+  }
+  .slide-reg {
+    height: 500px;
+  }
+  .slide-short {
+    height: 300px;
+  }
 }
 
-ul.appliances {
-  height: 2.783em;
-  padding: 0px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-  align-content: flex-end;
+.slide-content {
+  text-align: center;
+  @include span-columns(8);
+  @include shift(2);
 }
 
-li {
-  list-style-type: none;
-}
-
-li.appliance {
-  color: #5b5b5b;
-  text-align: left;
-  width: 33%;
-}
-
-.appliance-icon {
-  height: 20px;
-  vertical-align: top;
-}
-
-ul.brands {
-  height: 2.783em;
-  padding: 0px;
-  display: flex;
-  flex-flow: row wrap;
-  margin: 8px;
-}
-
-li.brand {
-  flex: 1;
-  align-self: center;
-  width: 50%;
-  margin: auto;
-}
-
-.brand-logo {
-  width: 60%;
-}
-
-#auth-label {
-  position: absolute;
-}
-
-
-
-
-
-.curtainContainer {
-  width: 100%;
-  height: 100%;
+.parallax-window {
+  overflow: hidden;
   position: relative;
-  color: #fff;
-}
-
-.curtainContainer .curtain {
-  width: 300%;
-  height: 1px;
-  background-color: #000000;
-  position: absolute;
-  top: 25%;
-  left: 0;
-  opacity: .5;
-
-}
-
-.curtainContainer .copy {
-  position: absolute;
-  bottom: 30%;
-  left: 0;
   width: 100%;
+}
+
+.parallax-background {
+  width: 100%;
+  position: absolute;
+  background-position: top;
+  @include fill-parent();
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  height: 500px;
+  width: 75px;
+  justify-content: space-around;
+  z-index: 999;
+  display: flex;
+  flex-flow: column-wrap;
+}
+
+nav li {
+
+}
+
+.pink-gradient {
+  background: rgba(115,26,51,0.91);/* Old Browsers */
+  background: -moz-linear-gradient(left, rgba(115,26,51,0.91) 0%, rgba(115,26,51,0.92) 0%, rgba(102,51,96,0.92) 100%); /* FF3.6+ */
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(115,26,51,0.91)), color-stop(0%, rgba(115,26,51,0.92)), color-stop(100%, rgba(102,51,96,0.92)));/* Chrome, Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(115,26,51,0.91) 0%, rgba(115,26,51,0.92) 0%, rgba(102,51,96,0.92) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, rgba(115,26,51,0.91) 0%, rgba(115,26,51,0.92) 0%, rgba(102,51,96,0.92) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, rgba(115,26,51,0.91) 0%, rgba(115,26,51,0.92) 0%, rgba(102,51,96,0.92) 100%); /* IE 10+ */
+  background: linear-gradient(to right, rgba(115,26,51,0.91) 0%, rgba(115,26,51,0.92) 0%, rgba(102,51,96,0.92) 100%);/* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#731a33', endColorstr='#663360', GradientType=1 );/* IE6-9 */
+}
+
+
+// splash page
+#splash.parallax-window {
+  height: 100%;
+  max-width: 100%;
+}
+
+#splash .parallax-content {
+  color: #fff;
   text-align: center;
-
+  width: 100%;
+  position: relative;
+  z-index: 8;
+  padding: 17%;
 }
 
-///////////////////////////////////////////////////////////////////////////////////
-////////////////////// Slide 5 ///////////////////////////////////////////////////
-///////////////////// Services //////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-
-
-#slide-5 .bcg {background-image:url('golden-gate.jpg')}
-
-
-///////////////////////////////////////////////////////////////////////////////////
-////////////////////// Slide 5 ///////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-
-
-///////////////////////////////////////////////////////////////////////////////////
-////////////////////// Slide 5 ///////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-///////////////////////////////////////////////////////////////////////////////////
-////////////////////// Slide 6 ///////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-#slide-6 .bcg {
-  background: none;
-  background-color: #fff;
-  height: 310px;
-  text-align: center;
+#splash h1, h3 {
+  font-family: 'PT Serif Caption';
+  color: #DBDBDB;
 }
 
-///////////////////////////////////////////////////////////////////////////////////
-////////////////////// Slide 7 ///////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-
-
-///////////////////////////////////////////////////////////////////////////////////
-////////////////////// Slide 8 ///////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-#slide-8 {
-
-  background-color: #fff;
-  height: 310px;
-  text-align: center;
-
+#splash .parallax-background {
+  background: url("ottos-splash2.jpg");
+  background-size: cover;
 }
 
+#about {
 
-
-#slide-9 .bcg {
-  background-image: url("golden-gate.jpg");
-}
-#slide-9 .bcg2 {
-  background-image: url("golden-gate-dark.jpg");
-  position: fixed;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-
-#slide-9 .bcg3 {
-  background: none;
-  background-color: #010101;
-  z-index: 2;
-  position: fixed;
-  left: 0;
-  opacity: 0;
-  z-index: 2;
 }
