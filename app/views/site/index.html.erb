@@ -1,226 +1,46 @@
+<main>
 
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <!-- nav bar  -->
+  <nav class="pink-gradient">
+    <ul>
+      <li><%= image_tag "telephone-48.png", class: "icon icon-phone" %></li>
+      <li>About</li>
+      <li>Services</li>
+      <li>Reviews</li>
+      <li>Contact Us</li>
+    </ul>
+  </nav>
 
-  <main>
-    <div >
-      <ul id="side-nav" class="side-nav container serif-font pink">
-        <li class="side-nav 1"><%= image_tag "telephone-48.png", class: "icon icon-phone" %></li>
-        <li class="side-nav 2">About</li>
-        <li class="side-nav 3">Services</li>
-        <li class="side-nav 4">Reviews</li>
-        <li class="side-nav 4">Contact</li>
-      </ul>
+  <!-- splash page -->
+  <section id="splash" class="parallax-window">
+    <div class="parallax-content">
+      <h1>Otto's Appliance Service, Inc.</h1>
+      <h3>Serving prompt, reliable appliance repairs since 1957.</h3>
     </div>
+    <div class="parallax-background"></div>
+  </section>
 
-    <section id="slide-1" class="homeSlide homeSlideSplash">
-      <div class="bcg" data-center="background-position: 30% 100%;" data-top-bottom="background-position: 30% 80%" data-anchor-target="#slide-1">
-        <div class="hsContainer">
-          <div class="hsContent is-center white" data-anchor-target="#slide-1 h1">
+  <!-- about page -->
+  <section id="about" class="slide slide-reg">
+    <div class="slide-content">
+      <h2>Who we are</h2>
+      <video id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
+      preload="auto" width="100%" height= "350px" poster="assets/nanu.png"
+      data-setup="{}">
+        <source src="http://cf.c.ooyala.com/J1bjI0cTpletnaKA7_rZR2iUsIWpTyEg/DOcJ-FxaFrRg4gtDEwOjEzYzowazumG4?_=daocht73nmi" type='video/mp4'>
+        <source src="http://cf.c.ooyala.com/J1bjI0cTpletnaKA7_rZR2iUsIWpTyEg/DOcJ-FxaFrRg4gtDEwOjEzYzowazumG4?_=daocht73nmi" type='video/webm'>
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+      </video>
+      <p> Otto's Appliance Service Inc. is a family owned and operated business servicing the Bay Area since 1957. We believe in quality service and do as much
+        as we can to satisfy our customers. What makes us different is our experience and long-standing reputation. </p>
+    </div>
+  </section>
 
+  <!--   -->
+  <section id="brands" class="slide slide-short">
+    <div class="slide-content">
+      <h2>Brands we service</h2>
 
-            <h1 class="splash head">Otto's Appliance Service, Inc.</h1>
-            <h3 class="splash subhead">Serving prompt, reliable appliance repairs since 1957.</h3>
-
-            <%= image_tag "arrow-down2.png", class: "icon icon-arrow" %>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <section id="slide-2" class="homeSlide homeSlideTall slide">
-      <div class="bcg" data-0="background-color:rgb(1,27,59,);" data-top="background-color:(255,255,255); opacity=1;"  data-anchor-target="#slide-2">
-        <div class="hsContainer">
-          <div class="hsContent is-center">
-            <h2 class="pink">About<hr class="divider"/></h2>
-            <video id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
-              preload="auto" width="100%" height= "350px" poster="assets/nanu.png"
-              data-setup="{}">
-              <source src="http://cf.c.ooyala.com/J1bjI0cTpletnaKA7_rZR2iUsIWpTyEg/DOcJ-FxaFrRg4gtDEwOjEzYzowazumG4?_=daocht73nmi" type='video/mp4'>
-              <source src="http://cf.c.ooyala.com/J1bjI0cTpletnaKA7_rZR2iUsIWpTyEg/DOcJ-FxaFrRg4gtDEwOjEzYzowazumG4?_=daocht73nmi" type='video/webm'>
-              <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-            </video>
-            <p> Otto's Appliance Service Inc. is a family owned and operated business servicing the Bay Area since 1957. We believe in quality service and do as much
-              as we can to satisfy our customers. What makes us different is our experience and long-standing reputation. </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <section id="slide-3" class="homeSlide homeSlideShort2 slide">
-      <div class="bcg" data-center="background-position: 0px 50%;" data-bottom-top="background-position: 0px 50%;" data-top-bottom="background-position: 0px 50%;" data-anchor-target="#slide-3">
-        <div class="hsContainer">
-          <div class="hsContent">
-            <div class="plaxEl" data-106-top="opacity: 0" data--30p-top="opacity: 1;" data--60p-top="opacity: 0;" data-bottom="opacity: 1; position: fixed; top: 206px; width: 100%; left: 0;"  data-anchor-target="#slide-3">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="homeSlide homeSlideTall2 slide">
-      <div class="bcg" data-anchor-target="#services">
-        <div class="hsContainer">
-          <div class="hsContent">
-
-            <h2 class="pink">Services<hr class="divider"/></h2>
-
-            <section id="appliances" class="service service-left">
-              <a class="icon service-icon fa fa-wrench fa-3x white is-center">
-                <%= image_tag "service-appliances-pic.jpg", class: "service-image" %>
-              </a>
-              <div class="content">
-                <h3 class="blue">Appliances We Fix</h3>
-                <ul class="appliances">
-                  <li class="appliance">
-                    <%= image_tag  "appliance-icons/oven.png", class: "appliance-icon" %> <span>Ovens</span>
-                  </li>
-                  <li class="appliance">
-                    <%= image_tag  "appliance-icons/cooktop.png", class: "appliance-icon" %> <span>Cooktops</span>
-                  </li>
-                  <li class="appliance">
-                    <%= image_tag  "appliance-icons/microwave.png", class: "appliance-icon" %> <span>Microwaves</span>
-                  </li>
-                </ul>
-                <ul class="appliances">
-                  <li class="appliance">
-                    <%= image_tag  "appliance-icons/range_hood.png", class: "appliance-icon" %> <span>Hoods</span>
-                  </li>
-                  <li class="appliance">
-                    <%= image_tag  "appliance-icons/range.png", class: "appliance-icon" %> <span>Ranges</span>
-                  </li>
-                  <li class="appliance">
-                    <%= image_tag  "appliance-icons/washer.png", class: "appliance-icon" %> <span>Washers</span>
-                  </li>
-                </ul>
-                <ul class="appliances">
-                  <li class="appliance">
-                    <%= image_tag  "appliance-icons/dryer.png", class: "appliance-icon" %> <span>Dryers</span>
-                  </li>
-                  <li class="appliance">
-                    <%= image_tag  "appliance-icons/disposal.png", class: "appliance-icon" %> <span>Disposals</span>
-                  </li>
-                  <li class="appliance">
-                    <%= image_tag  "appliance-icons/hot-water-dispenser.png", class: "appliance-icon" %> <span>Dispensers</span>
-                  </li>
-                </ul>
-              </div>
-            </section>
-
-            <section id="brands" class="service service-right">
-              <a class="icon service-icon fa fa-tags fa-3x white is-center">
-                <%= image_tag "insinkerator-lineup.jpg", class: "service-image" %>
-              </a>
-              <div class="content">
-                <h3 class="blue">Brands We Repair</h3>
-                <div id="auth-label"><i class="fa fa-star">Factory Authorized Service</i></div>
-                <ul class="brands brands-authorized">
-                  <li class="brand">
-                    <%= image_tag  "Thermador.png", class: "brand-logo" %>
-                  </li>
-                  <li class="brand">
-                    <%= image_tag  "Bosch.png", class: "brand-logo" %>
-                  </li>
-                </ul>
-                <ul class="brands">
-                  <li class="brand">
-                    <%= image_tag  "Insinkerator.png", class: "brand-logo" %>
-                  </li>
-                  <li class="brand">
-                    <%= image_tag  "GE_Appliances.png", class: "brand-logo" %>
-                  </li>
-                </ul>
-                <ul class="brands">
-                  <li class="brand">
-                    <%= image_tag  "Maytag.png", class: "brand-logo" %>
-                  </li>
-                  <li class="brand">
-                    <%= image_tag  "Kitchenaid.png", class: "brand-logo" %>
-                  </li>
-                </ul>
-                <ul class="brands">
-                  <li class="brand">
-                    <%= image_tag  "Kenmore.png", class: "brand-logo" %>
-                  </li>
-                  <li class="brand">
-                    <%= image_tag  "Whirlpool.png", class: "brand-logo" %>
-                  </li>
-                </ul>
-              </div>
-            </section>
-
-
-            <section id="locations" class="service service-left">
-              <a class="icon service-icon fa fa-truck fa-3x white is-center">
-                <%= image_tag "golden-gate4.jpg", class: "service-image" %>
-              </a>
-              <div class="content">
-                <h3 class="blue">Locations We Service</h3>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <section id="slide-4" class="homeSlide homeSlideTall slide">
-      <div class="bcg" data-anchor-target="#slide-4">
-        <div class="hsContainer">
-          <div class="hsContent white is-center">
-
-            <h2 class="white">Contact Us <hr class="divider"/></h2>
-
-            <div class="contact container">
-              <div class="hours">
-                8am - 5pm, Monday - Thursday
-                <br/> 8am - 3pm, Friday
-                <br/><span class="hours closed">(Closed 12-1pm)</span>
-              </div>
-              <div class="social-media">
-                <%= image_tag  "yelp-logo.png", class: "social-media" %>
-                <%= image_tag  "facebook-logo.png", class: "social-media" %>
-              </div>
-            </div>
-
-            <h1 class="container" id="phone">650.588.0309</h1>
-
-            <div class="ottos-info container">
-              <div class="ottos-info address">
-                1663 El Camino Real Millbrae, CA 94030
-              </div>
-              <div class="ottos-info email">
-                services@ottosappliance.com
-              </div>
-            </div>
-
-            <div id="google-map"> </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="slide-5" class="homeSlide homeSlideTall2 slide">
-      <div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 0px;" data-top-bottom="background-position: 50% 0px;" data-anchor-target="#slide-5">
-        <div class="curtainContainer">
-          <div class="curtain" data-bottom-top="opacity: 0" data-106-top="height: 1%; opacity: 0; top: -10%;" data-center="height: 100%; opacity: 0.5; top: 0%;" data-anchor-target="#slide-5">
-          </div>
-          <div class="copy" data-anchor-target="#slide-5 .copy">
-            <h2 class="white">Services</h2>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-
-
+    </div>
+  </section>
 </main>
