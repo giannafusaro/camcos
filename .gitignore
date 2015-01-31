@@ -14,3 +14,16 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+ottos/.sass-cache/8419f7b4895b98825a0603232b997618abb758d9/ie.scssc
+ottos/.sass-cache/8419f7b4895b98825a0603232b997618abb758d9/print.scssc
+ottos/.sass-cache/8419f7b4895b98825a0603232b997618abb758d9/screen.scssc
+ottos/.sass-cache/a9fa12a9beb573a968fa65ac71de014cfe553f5a/_reset.scssc
+ottos/.sass-cache/f582419c849571c90d81b9eb385c5c45244caea7/_utilities.scssc
+ottos/config.rb
+ottos/sass/ie.scss
+ottos/sass/print.scss
+ottos/sass/screen.scss
+ottos/stylesheets/ie.css
+ottos/stylesheets/print.css
+ottos/stylesheets/screen.css
+us-atlas/
