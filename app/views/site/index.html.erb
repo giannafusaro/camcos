@@ -3,7 +3,18 @@
   <!-- nav bar  -->
   <nav>
     <ul id="side-nav">
-      <a><li id="phone" class="unactive"><%= image_tag "telephone-48.png", class: "icon icon-phone" %><br/>Call Otto's<div id="tooltip-number"></div></li></a>
+      <a><li id="phone" class="unactive"><%= image_tag "telephone-48.png", class: "icon icon-phone" %><br/>Call Otto's</li></a>
+      <div id="tooltip-number">
+        <span>
+          <% if is_open? %>
+          We're open!
+          <% else %>
+          Closed
+          <% end %>
+        </span>
+
+        <span>650.588.0309</span>
+      </div>
       <a id="about" href="#about"><li id="about" class="unactive">About</li></a>
       <a id="services" href="#services"><li id="services" class="unactive">Services</li></a>
       <a id="reviews" href="#reviews"><li id="reviews" class="unactive">Reviews</li></a>
