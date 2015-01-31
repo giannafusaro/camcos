@@ -1,3 +1,10 @@
+
+$dark-grey: #333 !default;
+$yellow-green: rgb(62,67,30) !default;
+$off-white: #FBFBFB !default;
+$base-link-color: $dark-grey;
+$hover-link-color: $off-white;
+
 body {
   -webkit-font-smoothing: antialiased;
   background-color: $base-background-color;
@@ -53,7 +60,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: $hover-link-color;
+    color: $off-white;
   }
 
   &:active, &:focus {
