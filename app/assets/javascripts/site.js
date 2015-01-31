@@ -11,6 +11,8 @@ $( document ).ready(function() {
     }
   }();
 
+
+
   // configure splash page height
   $splash = $('section#splash');
   $slide = $('.slide');
@@ -21,15 +23,67 @@ $( document ).ready(function() {
   $('#splash > .parallax-background').css("height", (splashHeight*1.2)+"px");
   $('#splash > .parallax-background').css("top", "-" + ((splashHeight*1.2)/9)+"px");
 
+  $('#side-nav').css("top", (splashHeight));
+  $('#side-nav').css("opacity", 1);
+  $('#side-nav-arrow').css("opacity", 1);
+
 
   if ($('.parallax-window').length > 0) {
     parallax();
   }
 
   $(window).scroll(function(e) {
+
+    splashHeight = MYGLOBALS.getValue('splashHeight');
+    var curTop = 0;
+    curTop = $(window).scrollTop();
+
+    console.log("curTop window scrolltop: ", curTop);
+
+
     if ($('.parallax-window').length > 0) {
       parallax();
     }
+
+    if(curTop <= (splashHeight - 96)) {
+      if($('#side-nav').css("top", splashHeight + "px")) {
+
+        difference = curTop;
+
+        string="translateY(-" + difference + "px)";
+
+        $("#side-nav").css({
+          transform: string,
+          MozTransform: string,
+          WebkitTransform: string,
+          msTransform: string
+        });
+      }
+    }
+    if(curTop > (splashHeight - 96)) {
+      $("li#phone").css("border-top", "1px solid silver");
+    }
+  });
+
+  $("li#phone").click(function(e) {
+    $("#tooltip-number").css("display", "flex");
+  });
+
+  $("nav li").click(function(e) {
+    if(this.id != 'phone') {
+      $("#tooltip-number").css("display", "none");
+    }
+    // when an li in the nav is clicked
+    var selected = $(this);
+    var all = $('nav a');
+    var notSelected = all.not(selected.parent());
+
+    notSelected.children("li").removeClass('active');
+    notSelected.children("li").addClass('unactive');
+
+    selected.removeClass('unactive');
+    selected.addClass('active');
+
   });
 
   function parallax() {
@@ -57,9 +111,9 @@ $( document ).ready(function() {
     var plxSpeed = 0.25;
 
     plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
-
-
   }
+
+  $('nav a[href^="#' + window.location.href.split("#")[1] + '"]').children("li").trigger("click");
 
   // google map
   var infowindow, latlng, map, marker1, options;

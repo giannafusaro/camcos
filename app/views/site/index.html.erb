@@ -1,15 +1,16 @@
 <main>
 
   <!-- nav bar  -->
-  <nav class="pink-gradient">
-    <ul>
-      <li><%= image_tag "telephone-48.png", class: "icon icon-phone" %></li>
-      <li>About</li>
-      <li>Services</li>
-      <li>Reviews</li>
-      <li>Contact Us</li>
+  <nav>
+    <ul id="side-nav">
+      <a><li id="phone" class="unactive"><%= image_tag "telephone-48.png", class: "icon icon-phone" %><br/>Call Otto's<div id="tooltip-number"></div></li></a>
+      <a id="about" href="#about"><li id="about" class="unactive">About</li></a>
+      <a id="services" href="#services"><li id="services" class="unactive">Services</li></a>
+      <a id="reviews" href="#reviews"><li id="reviews" class="unactive">Reviews</li></a>
+      <a id="contact" href="#contact"><li id="contact" class="unactive">Contact Us</li></a>
     </ul>
   </nav>
+
 
   <!-- splash page -->
   <section id="splash" class="parallax-window">
@@ -18,12 +19,15 @@
       <h3>Serving prompt, reliable appliance repairs since 1957.</h3>
     </div>
     <div class="parallax-background"></div>
+    <div id="side-nav-arrow">
+      <i class="icon icon-arrow-circle-o-down icon-4x"></i>
+    </div>
   </section>
 
   <!-- about page -->
   <section id="about" class="slide slide-reg">
     <div class="slide-content">
-      <h2>Who we are</h2>
+      <a name="about"><h2>Who we are</h2></a>
       <video id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
       preload="auto" width="100%" height= "350px" poster="assets/nanu.png"
       data-setup="{}">
@@ -37,9 +41,9 @@
   </section>
 
   <!--   -->
-  <section id="brands" class="slide slide-short">
+  <section id="services" class="slide slide-short">
     <div class="slide-content">
-      <h2>Brands we service</h2>
+      <a name="services"><h2>Brands we service</h2></a>
 
     </div>
   </section>
