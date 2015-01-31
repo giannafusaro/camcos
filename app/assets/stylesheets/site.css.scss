@@ -6,6 +6,18 @@
 @import url(http://fonts.googleapis.com/css?family=Spinnaker);
 
 
+$dark-grey: #333 !default;
+$yellow-green: rgb(62,67,30) !default;
+$off-white: #FBFBFB !default;
+
+//colors i like
+// very pink: rgba(115, 26, 51, 0.9)
+// saturated magenta: rgb(67,30,62)
+// interesting yellow: rgb(62,67,30)
+// #361e43 color description : Very dark desaturated violet.
+// #1e4324 color description : Very dark desaturated lime green.
+//another purple:#361e43
+
 body, html {
   font-family: 'Open Sans';
   font-size: 100%;
@@ -82,27 +94,17 @@ section.slide {
   @include fill-parent();
 }
 
+
+
+////////////////////////////////////
+///////// nav bar
+/////////////////////////////////
+
 #side-nav-arrow, nav ul {
   left: 54px;
   z-index: 2;
   opacity: 0;
 }
-
-
-//colors i like
-// very pink: rgba(115, 26, 51, 0.9)
-// saturated magenta: rgb(67,30,62)
-// interesting yellow: rgb(62,67,30)
-// #361e43 color description : Very dark desaturated violet.
-// #1e4324 color description : Very dark desaturated lime green.
-//another purple:#361e43
-
-
-
-
-$dark-grey: #333 !default;
-$yellow-green: rgb(62,67,30) !default;
-$off-white: #FBFBFB !default;
 
 $nav-border: 1px solid silver;
 $nav-inner-border: 1px solid lighten(silver, 18%);
@@ -136,41 +138,46 @@ nav li#phone {
   cursor: pointer;
 }
 
+nav span {
+  width: 100%;
+  text-align: center;
+  &:first-child {
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+
 #tooltip-number {
+  border: 1px solid #d3d2d2;
+  background-color: rgba(211, 210, 210, 0.92);
+  box-shadow: inset 0 1px 2px #333;
+  border-radius: 15px;
+  position: absolute;
+  top: 5px;
+  left: 102px;
+  font-family: 'Spinnaker';
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  padding: 1em;
   display: none;
+  color: #333;
+  justify-content: center;
+  flex-direction: column;
+
+  box-shadow: inset 0 1px 1px darken(rgba(211, 210, 210, 1), 10%);
   &:before {
     content: '';
     border-top: 20px solid transparent;
     border-right: 19px solid rgba(211, 210, 210, 1);
     width: 0px;
     height: 0px;
-    position: absolute;
     top: 33%;
-    right: 13px;
+    position: absolute;
+    left: -20px;
     box-shadow: inset 0 1px 2px darken(rgba(211, 210, 210, 1), 10%);
   }
-  &:after {
-    content: "650 588 0309";
-    border: 1px solid #d3d2d2;
-    background-color: rgba(211, 210, 210, 0.92);
-    box-shadow: inset 0 1px 2px #333;
-    border-radius: 15px;
-    width: 160px;
-    height: 24px;
-    position: absolute;
-    top: 5px;
-    left: 102px;
-    font-family: 'Spinnaker';
-    font-size: 19px;
-    font-weight: bold;
-    letter-spacing: 0px;
-    padding: 1em;
-    display: flex;
-    color: #333;
-    justify-content: center;
 
-    box-shadow: inset 0 1px 1px darken(rgba(211, 210, 210, 1), 10%);
-  }
 }
 
 li#contact {
@@ -201,24 +208,10 @@ li.active {
   }
 }
 
-@include keyframes(biggerZ) {
-  from {
-    @include transform(translateZ(1));
-  }
-  to {
-    @include transform(translateZ(10000));
-  }
-}
 
-@include keyframes(enlargeFont) {
-  from {
-    font-size: 100%;
-  }
-  to {
-    font-size: 110%;
-  }
-}
-// splash page
+///////////////////////////////////////////
+//////// splash page
+///////////////////////////////////////////
 #splash.parallax-window {
   height: 100%;
   max-width: 100%;
@@ -245,4 +238,11 @@ li.active {
 
 #about {
 
+}
+
+//////////////////////////
+////////// about
+//////////////////////////
+#MY_VIDEO_1 .vjs-big-play-button {
+  z-index: 1;
 }
