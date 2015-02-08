@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
   var MYGLOBALS = function() {
     var globals = {
-      splashHeight : $(window).height(),
+      splashHeight : 450,
     }
     return {
       getValue : function(s) {
@@ -10,7 +10,6 @@ $( document ).ready(function() {
       }
     }
   }();
-
 
 
   // configure splash page height
@@ -38,20 +37,15 @@ $( document ).ready(function() {
     var curTop = 0;
     curTop = $(window).scrollTop();
 
-    console.log("curTop window scrolltop: ", curTop);
-
-
     if ($('.parallax-window').length > 0) {
       parallax();
     }
 
     if(curTop <= (splashHeight - 96)) {
       if($('#side-nav').css("top", splashHeight + "px")) {
-
+        $("li#phone").css("border-top", "0px solid #999");
         difference = curTop;
-
         string="translateY(-" + difference + "px)";
-
         $("#side-nav").css({
           transform: string,
           MozTransform: string,
@@ -61,8 +55,12 @@ $( document ).ready(function() {
       }
     }
     if(curTop > (splashHeight - 96)) {
-      $("li#phone").css("border-top", "1px solid silver");
+      $("li#phone").css("border-top", "1px solid #999");
     }
+  });
+
+  $("#close-tooltip").click(function(e) {
+    $("#tooltip-number").css("display", "none");
   });
 
   $("li#phone").click(function(e) {
@@ -79,9 +77,9 @@ $( document ).ready(function() {
     var notSelected = all.not(selected.parent());
 
     notSelected.children("li").removeClass('active');
-    notSelected.children("li").addClass('unactive');
+    notSelected.children("li").addClass('inactive');
 
-    selected.removeClass('unactive');
+    selected.removeClass('inactive');
     selected.addClass('active');
 
   });
@@ -115,38 +113,59 @@ $( document ).ready(function() {
 
   $('nav a[href^="#' + window.location.href.split("#")[1] + '"]').children("li").trigger("click");
 
-  // google map
-  var infowindow, latlng, map, marker1, options;
 
-  latlng = new google.maps.LatLng(37.6132591, -122.4047675);
+  var googleMap = (function () {
+    var myLatlng = new google.maps.LatLng(37.6132591, -122.4047675),
+    mapCenter = new google.maps.LatLng(37.6132591, -122.4047675),
+    mapCanvas = document.getElementById('google-map'),
+    mapOptions = {
+      center: mapCenter,
+      zoom: 13,
+      scrollwheel: false,
+      draggable: true,
+      disableDefaultUI: true,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    },
+    map = new google.maps.Map(mapCanvas, mapOptions),
+    contentString =
+    '<div id="content">'+
+    '<div id="siteNotice">'+
+    '</div>'+
+    '<h1 id="firstHeading" class="firstHeading">Otto\'s Appliance Service, Inc.</h1>'+
+    '<div id="bodyContent"'+
+    '<p>1661 El Camino Real</p>'+
+    '</div>'+
+    '</div>',
+    infowindow = new google.maps.InfoWindow({
+      content: contentString,
+      maxWidth: 300
+    }),
+    marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Otto\'s Appliance Service, Inc.'
+    });
 
-  options = {
-    zoom: 15,
-    center: latlng,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    navigationControl: true,
-    mapTypeControl: false,
-    scrollwheel: false,
-    disableDoubleClickZoom: true,
-    offsetWidth: true
-  };
+    return {
+      init: function () {
+        map.set('styles', [{
+          featureType: 'landscape',
+          elementType: 'geometry',
+          stylers: [
+          { hue: '#ffff00' },
+          { saturation: 30 },
+          { lightness: 10}
+          ]}
+        ]);
+        google.maps.event.addListener(marker, 'click', function () {
+          infowindow.open(map,marker);
+        });
+      }
+    };
+  }());
 
-  map = new google.maps.Map(document.getElementById("google-map"), options);
+googleMap.init();
 
-  marker1 = new google.maps.Marker({
-    position: latlng,
-    map: map
-  });
-
-  google.maps.event.addListener(marker1, "click", function() {
-    return infowindow.open(map, marker1);
-  });
-
-  infowindow = new google.maps.InfoWindow({
-    content: "<div class=\"info\"><a href=\"https://www.google.com/maps/dir/''/otto's+appliance+service,+inc.,+el+camino+real,+millbrae,+ca/@37.613286,-122.4390378,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x808f77777340c3f5:0x8e9e9781e1a01fb4!2m2!1d-122.404705!2d37.613291\"><strong>Otto's Appliance Service, Inc.</strong></a><br/>1663 El Camino Real</div>"
-  });
-
-  infowindow.open(map, marker1);
 
 
 });
