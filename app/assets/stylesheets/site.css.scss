@@ -1,74 +1,43 @@
-@include font-face(My-Font, '/fonts/my_font/MyFont-Italic', normal, italic);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-@import url(http://fonts.googleapis.com/css?family=Averia+Gruesa+Libre);
-@import url(http://fonts.googleapis.com/css?family=Lato|Antic+Slab|PT+Serif+Caption|Open+Sans:300italic,400|Open+Sans+Condensed:300);
-@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
-@import url(http://fonts.googleapis.com/css?family=Spinnaker);
-
-
-$dark-grey: #333 !default;
-$yellow-green: rgb(62,67,30) !default;
-$off-white: #FBFBFB !default;
-
-//colors i like
-// very pink: rgba(115, 26, 51, 0.9)
-// saturated magenta: rgb(67,30,62)
-// interesting yellow: rgb(62,67,30)
-// #361e43 color description : Very dark desaturated violet.
-// #1e4324 color description : Very dark desaturated lime green.
-//another purple:#361e43
-
 body, html {
-  font-family: 'Open Sans';
-  font-size: 100%;
   width: 100%;
-  background-color: #FBFBFB;
-  text-shadow: 0px 0px 0px #393939;
+  background-image: url("light-triangles-bgd2.png");
 }
 
 main {
-  display: inline-block;
+  display: block;
+  position: relative;
   @include fill-parent();
+  z-index: 0;
 }
 
-h1, h2, h3 {
-
-  text-shadow: 0px 1px 1px #bababa;
-}
-
-h1 {
-
-  font-size: 3.25em;
-}
-
-h2 {
-  font-size: 25px;
-  margin-bottom: 1em;
-  font-style: normal;
-  font-family: 'Spinnaker';
-  color: #333;
-}
-video {
-  -webkit-box-shadow: 15px 20px 29px -16px rgba(38,34,38,1);
-  -moz-box-shadow: 15px 20px 29px -16px rgba(38,34,38,1);
-   box-shadow: 15px 20px 29px -16px rgba(38,34,38,1);
-}
-
+video { box-shadow: 0px 16px 16px -16px $dark-gray; }
+p:first-letter{ text-transform: uppercase; }
 p {
-  padding: 2.5em;
-  color: #6e6e6e;
-
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin: 2.5em auto;
+  text-transform: lowercase;
+  line-height: 145%;
+  font-size: larger;
+  font-variant: small-caps;
+  padding: 1.0em 4.6em;
+  border: 2px solid #dddddd;
+  border-radius: 5px;
+  @include background-opacity($off-white, 0.3);
 }
 
 section.slide {
   @include fill-parent();
   @include outer-container();
   @include pad (3.375em);
+  display: block;
+  position: relative;
+
   .slide-tall {
     height: 750px;
   }
   .slide-reg {
-    height: 500px;
+    height: 450px;
   }
   .slide-short {
     height: 300px;
@@ -85,6 +54,7 @@ section.slide {
   overflow: hidden;
   position: relative;
   width: 100%;
+  max-width: 100%;
 }
 
 .parallax-background {
@@ -99,6 +69,7 @@ section.slide {
 ////////////////////////////////////
 ///////// nav bar
 /////////////////////////////////
+nav { font-family: $serif; }
 
 #side-nav-arrow, nav ul {
   left: 54px;
@@ -106,30 +77,25 @@ section.slide {
   opacity: 0;
 }
 
-$nav-border: 1px solid silver;
-$nav-inner-border: 1px solid lighten(silver, 18%);
-$nav-color: lighten($dark-grey, 30%);
-$nav-background-checked: rgba(62,67,30, .7) !default;
-$nav-border-checked: darken($yellow-green, 15%);
-$nav-color-checked: $off-white;
-
 #side-nav-arrow {
-  background-color: rgba(62,67,30, 0.8);
+  @include background-opacity($teal, .6);
   color: $off-white;
   position: absolute;
   height: 6em;
-  width: 117px;
+  width: 114px;
   bottom: 0px;
-  padding: 1em;
+  padding: 2em;
   text-align: center;
-  border-radius: 25% 25% 0 0 ;
+  border-radius: 25% 25% 0 0;
+}
+
+.icon-point-down {
+  font-size: 2.5em;
 }
 
 nav ul {
-  color: $nav-color;
+  color: $dark-gray;
   position: fixed;
-  font-family: 'Open Sans';
-  font-size: 100%;
   @include outer-container();
 }
 
@@ -138,74 +104,88 @@ nav li#phone {
   cursor: pointer;
 }
 
-nav span {
-  width: 100%;
-  text-align: center;
-  &:first-child {
-    font-size: 16px;
-    font-weight: normal;
-  }
-}
 
 #tooltip-number {
-  border: 1px solid #d3d2d2;
-  background-color: rgba(211, 210, 210, 0.92);
-  box-shadow: inset 0 1px 2px #333;
+  border: 1px solid lighten($off-white, 3%);
+  @include background-opacity($off-white, .9);
+  box-shadow: inset 0 1px 2px $dark-gray;
   border-radius: 15px;
   position: absolute;
   top: 5px;
   left: 102px;
-  font-family: 'Spinnaker';
-  font-size: 19px;
-  font-weight: bold;
   letter-spacing: 0px;
   padding: 1em;
   display: none;
-  color: #333;
   justify-content: center;
   flex-direction: column;
-
-  box-shadow: inset 0 1px 1px darken(rgba(211, 210, 210, 1), 10%);
+  box-shadow: inset 0 1px 1px darken($off-white, 10%);
   &:before {
     content: '';
     border-top: 20px solid transparent;
-    border-right: 19px solid rgba(211, 210, 210, 1);
+    border-right: 19px solid $off-white;
     width: 0px;
     height: 0px;
     top: 33%;
     position: absolute;
-    left: -20px;
-    box-shadow: inset 0 1px 2px darken(rgba(211, 210, 210, 1), 10%);
+    left: -19px;
+    box-shadow: inset 0 1px 2px darken($off-white, 10%);
   }
+}
 
+#tooltip-number span {
+  width: 100%;
+  text-align: center;
+  &:first-of-type {
+    font-style: italic;
+  }
+  &:last-of-type {
+    font-weight: bold;
+    font-size: larger;
+  }
+}
+
+#close-tooltip {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: x-small;
+  opacity: 1;
+  cursor: pointer;
+  &:hover {
+    opacity: .7;
+    cursor: pointer;
+  }
 }
 
 li#contact {
-  border-bottom: $nav-border;
+  border-bottom: 1px solid $light-gray;
 }
 
 nav li {
-  border-left: $nav-border; border-right: $nav-border;  border-bottom: $nav-inner-border;
+  border-left: 1px solid $medium-gray; border-right: 1px solid $medium-gray; border-bottom: 1px solid $light-gray;
   padding: 1em;
   text-align: center;
-  transition: background-color 0.2s ease;
   @include fill-parent();
 }
 
-nav li.unactive {
-  color: $nav-color;
+nav li.inactive {
+  color: $dark-gray;
+
   &:hover {
-    background-color: darken($off-white, 3%);
+    @include background-opacity(darken($light-gray, 9%), 0.3);
   }
 }
 
+// 1px solid #B1C1BB
+//border-left: 1px solid #5c6e6c;
+//border-right: 1px solid #5c6e6c;
+//border-bottom: 1px solid #869c99;
+
 li.active {
   color: $off-white;
-  background-color: $nav-background-checked;
-  box-shadow: inset 0 1px 2px darken($nav-background-checked, 10%);
-  &:hover {
-    background-color: lighten($nav-background-checked, 3%);
-  }
+  text-shadow: 1px 1px 1px darken($teal, 10%);
+  @include background-opacity($teal, 0.9);
+  box-shadow: inset 0 1px 2px  darken($teal, 10%);
 }
 
 
@@ -213,36 +193,106 @@ li.active {
 //////// splash page
 ///////////////////////////////////////////
 #splash.parallax-window {
-  height: 100%;
+  height: 450px;
   max-width: 100%;
+  position: relative;
 }
 
 #splash .parallax-content {
-  color: #fff;
+  color: $off-white;
   text-align: center;
   width: 100%;
   position: relative;
-  z-index: 1;
-  padding: 17%;
+  z-index: 3;
+  margin: 8em 0;
 }
 
 #splash h1, h3 {
-  font-family: 'PT Serif Caption';
-  color: #DBDBDB;
+  color: $off-white;
+  text-shadow: 1px 1px 1px #17181A;
 }
+
+// rgba(13, 80, 71, 0.71);
+
 
 #splash .parallax-background {
-  background: url("ottos-splash2.jpg");
-  background-size: cover;
-}
-
-#about {
-
+  background: url("ottos3.jpg");
+  background-size: auto 90%;
+  &:after {
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    z-index: 2;
+    top: 0;
+    content: '';
+    @include background(linear-gradient(rgba(72, 109, 173, 0.3), transparent) top no-repeat, linear-gradient(rgba(10, 49, 115, .3), rgba(10, 49, 115, 0)) left repeat);
+  }
 }
 
 //////////////////////////
 ////////// about
 //////////////////////////
-#MY_VIDEO_1 .vjs-big-play-button {
-  z-index: 1;
+#MY_VIDEO_1 .vjs-big-play-button { z-index: 1; }
+section#about { display: block; }
+
+
+//////////////////////////
+////////// brands
+//////////////////////////
+#brands .parallax-content {
+
 }
+#brands .parallax-background {
+  background: url("purple-shapes.png");
+  background-size: cover;
+  height: 300px;
+  top: 0;
+  &:after {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    z-index: 2;
+    top: 0;
+    content: '';
+    // @include background(linear-gradient(rgba(72, 109, 173, 0.3), transparent) top no-repeat, linear-gradient(rgba(10, 49, 115, .3), rgba(10, 49, 115, 0)) left repeat);
+  }
+}
+
+
+
+//////////////////////////
+////////// services
+//////////////////////////
+
+
+//////////////////////////
+////////// reviews
+//////////////////////////
+
+
+
+//////////////////////////
+////////// contact
+//////////////////////////
+#google-map {
+  height: 500px;
+  width: 500px;
+}
+
+
+// $nav-border: 1px solid silver;
+// $nav-inner-border: 1px solid lighten(silver, 3%);
+// $nav-color: #103732;
+// // $nav-light-green: rgba(162, 222, 208, 0.4);
+// $nav-grey-green: rgb(204, 219, 215);
+// $nav-background-checked: $teal !default;
+// $nav-border-checked: darken($teal, 15%);
+// $nav-color-checked: darken($teal, 15%);
+
+//colors i like
+// very pink: rgba(115, 26, 51, 0.9)
+// saturated magenta: rgb(67,30,62)
+// interesting yellow: rgb(62,67,30)
+// #361e43 color description : Very dark desaturated violet.
+// #1e4324 color description : Very dark desaturated lime green.
+//another purple:#361e43

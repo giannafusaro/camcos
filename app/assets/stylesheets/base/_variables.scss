@@ -1,6 +1,14 @@
+@include font-face(My-Font, '/fonts/my_font/MyFont-Italic', normal, italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Averia+Gruesa+Libre);
+@import url(http://fonts.googleapis.com/css?family=Lato|Antic+Slab|PT+Serif+Caption|Open+Sans:300italic,400|Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+@import url(http://fonts.googleapis.com/css?family=Spinnaker);
+@import url(http://fonts.googleapis.com/css?family=ABeeZee:400,400italic|Flamenco:300,400|Crete+Round:400,400italic|Bree+Serif|Sintony:400,700|Hind:400,300|Oxygen:400,300|Stint+Ultra+Expanded);
+
 // Typography
-$sans-serif: $helvetica;
-$serif: $georgia;
+$sans-serif: "Crete Round";
+$serif: "ABeeZee";
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
 
@@ -20,23 +28,30 @@ $header-line-height: 1.25;
 // Other Sizes
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #477DCA;
+$splash-blue: rgb(10, 49, 115);
+$medium-blue: rgb(72, 109, 173);
+$light-blue: #9ebef6;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #DDD;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
+$teal: rgb(0, 132, 114) !default;
+$off-white: #e3e5e8 !default;
+$action-color: $splash-blue;
+
 
 // Background Color
 $base-background-color: white;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$base-accent-color: $blue;
+$base-accent-color: $splash-blue;
 
 // Link Colors
 $base-link-color: $base-accent-color;
@@ -61,5 +76,6 @@ $form-border-color-focus: $base-accent-color;
 $form-border-radius: $base-border-radius;
 $form-box-shadow: inset 0 1px 3px rgba(black,0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
