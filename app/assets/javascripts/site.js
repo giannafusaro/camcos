@@ -14,13 +14,22 @@ $( document ).ready(function() {
 
   // configure splash page height
   $splash = $('section#splash');
+  $parallax_short = $('section#brands');
   $slide = $('.slide');
   splashHeight = MYGLOBALS.getValue('splashHeight');
-  console.log("splashHeight, ", splashHeight);
+  console.log("$splash: ", $splash);
+  console.log("$parallax-short: ", $parallax_short);
   $splash.height(splashHeight);
   $("#splash.parallax-window").css("max-height", splashHeight);
-  $('#splash > .parallax-background').css("height", (splashHeight*1.2)+"px");
-  $('#splash > .parallax-background').css("top", "-" + ((splashHeight*1.2)/9)+"px");
+  $('.parallax-background.splash').css("height", (splashHeight*1.2)+"px");
+  $('.parallax-background.splash').css("top", "-" + ((splashHeight*1.2)/9)+"px");
+
+  parallaxShortHeight = 300;
+  $parallax_short.height(parallaxShortHeight);
+  $("#brands.parallax-window").css("max-height", parallaxShortHeight);
+  $('.parallax-background.short').css("height", (parallaxShortHeight*1.2)+"px");
+  $('.parallax-background.short').css("top", "-" + ((parallaxShortHeight*1.2)/9)+"px");
+
 
   $('#side-nav').css("top", (splashHeight));
   $('#side-nav').css("opacity", 1);
@@ -102,11 +111,12 @@ $( document ).ready(function() {
     var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
     var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
 
-    console.log("plxWindowTopToPageTop, windowTopToPageTop, plxWindowTopToWindowTop", plxWindowTopToPageTop, windowTopToPageTop, plxWindowTopToWindowTop);
-    console.log("plxBackgroundTopToPageTop, windowInnerHeight, plxWindowTopToWindowTop, plxBackgroundTopToWindowBottom", plxBackgroundTopToPageTop, windowInnerHeight, plxBackgroundTopToWindowTop, plxBackgroundTopToWindowBottom);
+    // console.log("plxWindowTopToPageTop, windowTopToPageTop, plxWindowTopToWindowTop", plxWindowTopToPageTop, windowTopToPageTop, plxWindowTopToWindowTop);
+    // console.log("plxBackgroundTopToPageTop, windowInnerHeight, plxWindowTopToWindowTop, plxBackgroundTopToWindowBottom", plxBackgroundTopToPageTop, windowInnerHeight, plxBackgroundTopToWindowTop, plxBackgroundTopToWindowBottom);
 
 
     var plxSpeed = 0.25;
+
 
     plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
   }
