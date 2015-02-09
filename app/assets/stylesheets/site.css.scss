@@ -50,19 +50,6 @@ section.slide {
   @include shift(2);
 }
 
-.parallax-window {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-}
-
-.parallax-background {
-  width: 100%;
-  position: absolute;
-  background-position: top;
-  @include fill-parent();
-}
 
 
 
@@ -82,11 +69,12 @@ nav { font-family: $serif; }
   color: $off-white;
   position: absolute;
   height: 6em;
-  width: 114px;
+  width: 115px;
   bottom: 0px;
   padding: 2em;
   text-align: center;
-  border-radius: 25% 25% 0 0;
+  border-radius: 2% 2% 0 0;
+  border: 1px solid rgba(153, 153, 153, 0.35);
 }
 
 .icon-point-down {
@@ -188,6 +176,21 @@ li.active {
   box-shadow: inset 0 1px 2px  darken($teal, 10%);
 }
 
+///////////////////////////////////////////
+//////// parallax
+///////////////////////////////////////////
+.parallax-window {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.parallax-background {
+  width: 100%;
+  background-position: center;
+  @include fill-parent();
+}
 
 ///////////////////////////////////////////
 //////// splash page
@@ -216,8 +219,12 @@ li.active {
 
 
 #splash .parallax-background {
-  background: url("ottos3.jpg");
-  background-size: auto 90%;
+  position: absolute;
+  background: url("ottos3-nofade.jpg") no-repeat 0px -100px fixed;
+  background-size: 110% auto;
+
+
+
   &:after {
     position: absolute;
     width: 100%;
@@ -225,7 +232,7 @@ li.active {
     z-index: 2;
     top: 0;
     content: '';
-    @include background(linear-gradient(rgba(72, 109, 173, 0.3), transparent) top no-repeat, linear-gradient(rgba(10, 49, 115, .3), rgba(10, 49, 115, 0)) left repeat);
+    @include background(linear-gradient(rgba(72, 109, 173, 0.3), transparent) top no-repeat, linear-gradient(rgba(10, 49, 115, .8), rgba(10, 49, 115, 0)) left repeat);
   }
 }
 
@@ -239,14 +246,24 @@ section#about { display: block; }
 //////////////////////////
 ////////// brands
 //////////////////////////
+#brands.parallax-window {
+  height: 300px;
+  max-width: 100%;
+  position: relative;
+}
+
 #brands .parallax-content {
+  @include fill-parent();
+  color: $off-white;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 3;
 
 }
 #brands .parallax-background {
   background: url("purple-shapes.png");
-  background-size: cover;
-  height: 300px;
-  top: 0;
+  background-size: auto 90%;
   &:after {
     position: absolute;
     width: 100%;
@@ -257,6 +274,23 @@ section#about { display: block; }
     // @include background(linear-gradient(rgba(72, 109, 173, 0.3), transparent) top no-repeat, linear-gradient(rgba(10, 49, 115, .3), rgba(10, 49, 115, 0)) left repeat);
   }
 }
+.brands-container {
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: center;
+
+}
+.brand-logo {
+  flex: 1;
+  align-self: center;
+  max-width: 140px;
+  height: 75px;
+  margin: auto;
+}
+
 
 
 
